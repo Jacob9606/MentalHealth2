@@ -6,11 +6,14 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const MindfulnessTechniques34 = () => {
+  const navigation = useNavigation();
+
   const onNextPress = () => {
-    // Logic to go to the next set of mindfulness techniques
-    console.log("Next set of techniques");
+    // Navigate to MindfulnessTechniques2
+    navigation.navigate("MindfulnessTechniques56");
   };
 
   return (

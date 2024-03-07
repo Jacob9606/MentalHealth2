@@ -6,11 +6,15 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons"; // Expo를 사용한다고 가정합니다.
+import { useNavigation } from "@react-navigation/native";
 
 const MeditationBenefits1 = () => {
+  const navigation = useNavigation();
+
   const onNextPress = () => {
     // Logic to go to the next screen or component
-    console.log("Next Benefits");
+    navigation.navigate("MeditationBenefits2");
   };
 
   return (
@@ -51,6 +55,21 @@ const MeditationBenefits1 = () => {
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
+      <View style={styles.iconContainer}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationBenefits1")}
+        >
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <MaterialIcons name="home" size={28} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationBenefits2")}
+        >
+          <AntDesign name="arrowright" size={24} color="black" />
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };
@@ -113,11 +132,19 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
     alignItems: "center",
+    marginBottom: 20,
   },
   buttonText: {
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    marginTop: 20, // 버튼과 아이콘 사이의 간격을 조정합니다.
   },
 });
 

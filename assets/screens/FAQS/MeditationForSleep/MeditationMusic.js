@@ -8,12 +8,14 @@ import {
   Linking,
   ScrollView,
 } from "react-native";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
-// You would fetch video IDs dynamically but for this example, we use placeholders
+// 수정된 비디오 링크
 const videoIDs = {
-  theSoundOfRain: "VIDEO_ID_1",
-  fallingAsleep: "VIDEO_ID_2",
-  niceAndCosy: "VIDEO_ID_3",
+  theSoundOfRain: "J4d-a7dVtiQ",
+  fallingAsleep: "U6Ay9v7gK9w", // 변경된 비디오 링크
+  niceAndCosy: "0te4Y6u9kM8", // 변경된 비디오 링크
 };
 
 const MeditationForSleep = () => {
@@ -30,6 +32,8 @@ const MeditationForSleep = () => {
       .catch((err) => console.error("An error occurred", err));
   };
 
+  const navigation = useNavigation();
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
@@ -45,13 +49,24 @@ const MeditationForSleep = () => {
             style={styles.thumbnail}
             source={{ uri: `http://img.youtube.com/vi/${videoId}/0.jpg` }}
           />
-          {/* Other elements like play button etc., can be added here */}
           <Text style={styles.thumbnailText}>
             {key.replace(/([A-Z])/g, " $1").trim()}
           </Text>
         </TouchableOpacity>
       ))}
-      {/* ...other components like navigation buttons... */}
+      <View style={styles.iconContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate("FAQS")}>
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <MaterialIcons name="home" size={28} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationBenefits1")}
+        >
+          <AntDesign name="arrowright" size={24} color="black" />
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };
@@ -77,17 +92,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   thumbnail: {
-    width: 200, // Set the width of the thumbnail
-    height: 100, // Set the height of the thumbnail
-    resizeMode: "cover",
+    width: 100, // Adjust thumbnail width as needed
+    height: 100, // Adjust thumbnail height as needed
+    borderRadius: 10, // Add border radius for rounded corners
+    marginBottom: 10, // Add margin bottom for spacing
   },
   thumbnailText: {
-    color: "#fff",
+    color: "black",
     fontSize: 16,
     fontWeight: "bold",
     textAlign: "center",
   },
-  // ...other styles...
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    marginTop: 20, // 버튼과 아이콘 사이의 간격을 조정합니다.
+  },
 });
 
 export default MeditationForSleep;

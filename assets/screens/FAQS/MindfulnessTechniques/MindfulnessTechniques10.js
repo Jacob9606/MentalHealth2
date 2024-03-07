@@ -8,11 +8,6 @@ import {
 } from "react-native";
 
 const MindfulnessTechniques10 = () => {
-  const onNextPress = () => {
-    // Logic to go to the next mindfulness technique
-    console.log("Next technique");
-  };
-
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
@@ -23,9 +18,6 @@ const MindfulnessTechniques10 = () => {
           10. As you go to sleep, take mindful breathing.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
     </ScrollView>
   );
 };

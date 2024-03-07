@@ -6,11 +6,15 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const CompassionFAQ1 = () => {
+  const navigation = useNavigation();
+
   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
-    console.log("Next FAQ");
+    navigation.navigate("CompassionFAQ2");
   };
 
   return (
@@ -33,6 +37,17 @@ const CompassionFAQ1 = () => {
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
+      <View style={styles.iconContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate("CompassionFAQ1")}>
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <MaterialIcons name="home" size={28} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("CompassionFAQ2")}>
+          <AntDesign name="arrowright" size={24} color="black" />
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };
@@ -100,6 +115,14 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    position: "absolute", // 아이콘 컨테이너를 절대 위치로 설정합니다.
+    bottom: 30, // 아이콘 컨테이너를 화면 아래에 위치시킵니다.
   },
 });
 

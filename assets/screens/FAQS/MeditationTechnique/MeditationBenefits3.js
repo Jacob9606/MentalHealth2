@@ -6,12 +6,11 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const MeditationBenefits3 = () => {
-  const onNextPress = () => {
-    // Logic to go to the next screen or component
-    console.log("Done");
-  };
+  const navigation = useNavigation();
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -49,6 +48,21 @@ const MeditationBenefits3 = () => {
         <Text style={styles.listItem}>
           12. Helps living in the present moment.
         </Text>
+      </View>
+      <View style={styles.iconContainer}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationBenefits2")}
+        >
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <MaterialIcons name="home" size={28} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationBenefits1")}
+        >
+          <AntDesign name="arrowright" size={24} color="black" />
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -96,6 +110,13 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     lineHeight: 24,
     marginBottom: 5,
+  },
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    marginTop: 20, // 버튼과 아이콘 사이의 간격을 조정합니다.
   },
 });
 

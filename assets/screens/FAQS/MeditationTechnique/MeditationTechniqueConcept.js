@@ -6,11 +6,15 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons"; // Expo를 사용한다고 가정합니다.
+import { useNavigation } from "@react-navigation/native";
 
 const MeditationTechniqueConcept = () => {
+  const navigation = useNavigation();
+
   const onNextPress = () => {
     // Insert navigation logic to the next screen or state update
-    console.log("Next");
+    navigation.navigate("MeditationTechniqueBasics");
   };
 
   return (
@@ -32,6 +36,19 @@ const MeditationTechniqueConcept = () => {
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
+      <View style={styles.iconContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate("FAQS")}>
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <MaterialIcons name="home" size={28} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationTechniqueBasics")}
+        >
+          <AntDesign name="arrowright" size={24} color="black" />
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };
@@ -98,6 +115,14 @@ const styles = StyleSheet.create({
     color: "#4A90E2",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    position: "absolute", // 아이콘 컨테이너를 절대 위치로 설정합니다.
+    bottom: 30, // 아이콘 컨테이너를 화면 아래에 위치시킵니다.
   },
 });
 

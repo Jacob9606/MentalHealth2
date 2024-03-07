@@ -17,6 +17,7 @@ const FAQs = () => {
     navigation.navigate("FAQDetail", { faqKey });
   };
 
+  // faqItems 배열 정의
   const faqItems = [
     "Mindfulness Techniques",
     "Meditation Technique",
@@ -35,10 +36,30 @@ const FAQs = () => {
           key={index}
           style={styles.button}
           onPress={() => {
-            if (item === "Mindfulness Techniques") {
-              navigation.navigate("MindfulnessTechniques1");
-            } else {
-              navigateToFAQDetail(item);
+            switch (item) {
+              case "Mindfulness Techniques":
+                navigation.navigate("MindfulnessTechniques1");
+                break;
+              case "Meditation Technique":
+                navigation.navigate("MeditationTechniqueConcept");
+                break;
+              case "Meditation for sleep":
+                navigation.navigate("MeditationMusic");
+                break;
+              case "Compassion":
+                navigation.navigate("CompassionFAQ1");
+                break;
+              case "Gratitude":
+                navigation.navigate("GratitudeFAQ1");
+                break;
+              case "Breathing exercise Technique":
+                navigation.navigate("BreathingFAQ1");
+                break;
+              case "Progressive muscle relaxation Techniques":
+                navigation.navigate("ProgressiveFAQ");
+                break;
+              default:
+                navigateToFAQDetail(item);
             }
           }}
         >
@@ -79,6 +100,13 @@ const styles = StyleSheet.create({
     color: "#4A90E2",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    marginTop: 20, // 버튼과 아이콘 사이의 간격을 조정합니다.
   },
 });
 

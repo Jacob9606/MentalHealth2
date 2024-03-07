@@ -6,11 +6,14 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const MindfulnessTechniques2 = () => {
+  const navigation = useNavigation();
+
   const onNextPress = () => {
-    // Logic to go to the next mindfulness technique
-    console.log("Next technique");
+    // Navigate to MindfulnessTechniques2
+    navigation.navigate("MindfulnessTechniques34");
   };
 
   return (
@@ -28,6 +31,21 @@ const MindfulnessTechniques2 = () => {
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
+      <View style={styles.iconContainer}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationTechniqueConcept")}
+        >
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <MaterialIcons name="home" size={28} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationTechniqueBasics")}
+        >
+          <AntDesign name="arrowright" size={24} color="black" />
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };
@@ -87,6 +105,14 @@ const styles = StyleSheet.create({
     color: "#4A90E2",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    position: "absolute", // 아이콘 컨테이너를 절대 위치로 설정합니다.
+    bottom: 30, // 아이콘 컨테이너를 화면 아래에 위치시킵니다.
   },
 });
 

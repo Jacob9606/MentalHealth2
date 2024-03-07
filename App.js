@@ -19,6 +19,38 @@ import ProgressReport from "./assets/screens/Profile/ProgressReport";
 
 import FAQS from "./assets/screens/FAQS/FAQS";
 import MindfulnessTechniques1 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques1";
+import MindfulnessTechniques2 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques2";
+import MindfulnessTechniques34 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques34";
+import MindfulnessTechniques56 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques56";
+import MindfulnessTechniques789 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques789";
+import MindfulnessTechniques10 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques10";
+
+import MeditationTechniqueConcept from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueConcept";
+import MeditationTechniqueBasics from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueBasics";
+import MeditationTechniqueStep1 from "./assets/screens/FAQS/MeditationTechnique/MeditaitonTechniqueStep1";
+import MeditationTechniqueStep2 from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueStep2";
+import MeditationTechniqueStep3 from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueStep3";
+import MeditationTechniqueStep4 from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueStep4";
+import MeditationTechniqueStep5 from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueStep5";
+import MeditationBenefits1 from "./assets/screens/FAQS/MeditationTechnique/MeditationBenefits1";
+import MeditationBenefits2 from "./assets/screens/FAQS/MeditationTechnique/MeditationBenefits2";
+import MeditationBenefits3 from "./assets/screens/FAQS/MeditationTechnique/MeditationBenefits3";
+
+import MeditationMusic from "./assets/screens/FAQS/MeditationForSleep/MeditationMusic";
+
+import CompassionFAQ1 from "./assets/screens/FAQS/Compassion/CompassionFAQ1";
+import CompassionFAQ2 from "./assets/screens/FAQS/Compassion/CompassionFAQ2";
+
+import BreathingFAQ1 from "./assets/screens/FAQS/BreathingExerciseTechnique/BreathingFAQ1";
+import BreathingFAQ2 from "./assets/screens/FAQS/BreathingExerciseTechnique/BreathingFAQ2";
+
+import ProgressiveFAQ from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveFAQ";
+import ProgressiveTech1 from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveTech1";
+import ProgressiveTech2 from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveTech2";
+
+import GratitudeFAQ1 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ1";
+import GratitudeFAQ2 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ2";
+import GratitudeFAQ3 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ3";
 
 // Dass-21 Screens
 import Q1 from "./assets/screens/Dass21/Q1";
@@ -142,6 +174,136 @@ function App() {
           name="MindfulnessTechniques1"
           component={MindfulnessTechniques1}
           options={{ title: "MindfulnessTechniques1" }}
+        />
+        <Stack.Screen
+          name="MindfulnessTechniques2"
+          component={MindfulnessTechniques2}
+          options={{ title: "MindfulnessTechniques2" }}
+        />
+        <Stack.Screen
+          name="MindfulnessTechniques34"
+          component={MindfulnessTechniques34}
+          options={{ title: "MindfulnessTechniques34" }}
+        />
+        <Stack.Screen
+          name="MindfulnessTechniques56"
+          component={MindfulnessTechniques56}
+          options={{ title: "MindfulnessTechniques56" }}
+        />
+        <Stack.Screen
+          name="MindfulnessTechniques789"
+          component={MindfulnessTechniques789}
+          options={{ title: "MindfulnessTechniques789" }}
+        />
+        <Stack.Screen
+          name="MindfulnessTechniques10"
+          component={MindfulnessTechniques10}
+          options={{ title: "MindfulnessTechniques10" }}
+        />
+        <Stack.Screen
+          name="MeditationTechniqueConcept"
+          component={MeditationTechniqueConcept}
+          options={{ title: "MeditationTechniqueConcept" }}
+        />
+        <Stack.Screen
+          name="MeditationTechniqueBasics"
+          component={MeditationTechniqueBasics}
+          options={{ title: "MeditationTechniqueBasics" }}
+        />
+        <Stack.Screen
+          name="MeditationTechniqueStep1"
+          component={MeditationTechniqueStep1}
+          options={{ title: "MeditationTechniqueStep1" }}
+        />
+        <Stack.Screen
+          name="MeditationTechniqueStep2"
+          component={MeditationTechniqueStep2}
+          options={{ title: "MeditationTechniqueStep2" }}
+        />
+        <Stack.Screen
+          name="MeditationTechniqueStep3"
+          component={MeditationTechniqueStep3}
+          options={{ title: "MeditationTechniqueStep3" }}
+        />
+        <Stack.Screen
+          name="MeditationTechniqueStep4"
+          component={MeditationTechniqueStep4}
+          options={{ title: "MeditationTechniqueStep4" }}
+        />
+        <Stack.Screen
+          name="MeditationTechniqueStep5"
+          component={MeditationTechniqueStep5}
+          options={{ title: "MeditationTechniqueStep5" }}
+        />
+        <Stack.Screen
+          name="MeditationBenefits1"
+          component={MeditationBenefits1}
+          options={{ title: "MeditationBenefits1" }}
+        />
+        <Stack.Screen
+          name="MeditationBenefits2"
+          component={MeditationBenefits2}
+          options={{ title: "MeditationBenefits2" }}
+        />
+        <Stack.Screen
+          name="MeditationBenefits3"
+          component={MeditationBenefits3}
+          options={{ title: "MeditationBenefits3" }}
+        />
+        <Stack.Screen
+          name="MeditationMusic"
+          component={MeditationMusic}
+          options={{ title: "MeditationMusic" }}
+        />
+        <Stack.Screen
+          name="CompassionFAQ1"
+          component={CompassionFAQ1}
+          options={{ title: "CompassionFAQ1" }}
+        />
+        <Stack.Screen
+          name="CompassionFAQ2"
+          component={CompassionFAQ2}
+          options={{ title: "CompassionFAQ2" }}
+        />
+        <Stack.Screen
+          name="BreathingFAQ1"
+          component={BreathingFAQ1}
+          options={{ title: "BreathingFAQ1" }}
+        />
+        <Stack.Screen
+          name="BreathingFAQ2"
+          component={BreathingFAQ2}
+          options={{ title: "BreathingFAQ2" }}
+        />
+        <Stack.Screen
+          name="ProgressiveFAQ"
+          component={ProgressiveFAQ}
+          options={{ title: "ProgressiveFAQ" }}
+        />
+        <Stack.Screen
+          name="ProgressiveTech1"
+          component={ProgressiveTech1}
+          options={{ title: "ProgressiveTech1" }}
+        />
+        <Stack.Screen
+          name="ProgressiveTech2"
+          component={ProgressiveTech2}
+          options={{ title: "ProgressiveTech2" }}
+        />
+        <Stack.Screen
+          name="GratitudeFAQ1"
+          component={GratitudeFAQ1}
+          options={{ title: "GratitudeFAQ1" }}
+        />
+        <Stack.Screen
+          name="GratitudeFAQ2"
+          component={GratitudeFAQ2}
+          options={{ title: "GratitudeFAQ2" }}
+        />
+        <Stack.Screen
+          name="GratitudeFAQ3"
+          component={GratitudeFAQ3}
+          options={{ title: "GratitudeFAQ3" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
