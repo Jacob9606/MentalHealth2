@@ -44,13 +44,48 @@ import CompassionFAQ2 from "./assets/screens/FAQS/Compassion/CompassionFAQ2";
 import BreathingFAQ1 from "./assets/screens/FAQS/BreathingExerciseTechnique/BreathingFAQ1";
 import BreathingFAQ2 from "./assets/screens/FAQS/BreathingExerciseTechnique/BreathingFAQ2";
 
+import ProgressiveConcept from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveConcept";
 import ProgressiveFAQ from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveFAQ";
 import ProgressiveTech1 from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveTech1";
-import ProgressiveTech2 from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveTech2";
 
 import GratitudeFAQ1 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ1";
 import GratitudeFAQ2 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ2";
 import GratitudeFAQ3 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ3";
+
+import AnxietyHome from "./assets/screens/Anxiety/AnxietyHome";
+import AnxietyAwareness from "./assets/screens/Anxiety/AnxietyAwareness";
+import AnxietySymptoms from "./assets/screens/Anxiety/AnxietySymptoms";
+import AnxietyTreatment from "./assets/screens/Anxiety/AnxietyTreatment";
+import AnxietyFAQS1 from "./assets/screens/Anxiety/AnxietyFAQS1";
+import AnxietyFAQS2 from "./assets/screens/Anxiety/AnxietyFAQS2";
+import AnxietyFAQS3 from "./assets/screens/Anxiety/AnxietyFAQS3";
+
+import DepressionHome from "./assets/screens/Depresssion/DepressionHome";
+import DepressionAwarness from "./assets/screens/Depresssion/DepressionAwarness";
+import DepressionSymptoms from "./assets/screens/Depresssion/DepressionSymptoms";
+import DepressionTreatment from "./assets/screens/Depresssion/DepressionTreatment";
+import DepressionSelfCare from "./assets/screens/Depresssion/DepressionSelfCare";
+import DepressionFAQS1 from "./assets/screens/Depresssion/DepressionFAQS1";
+import DepressionFAQS2 from "./assets/screens/Depresssion/DepressionFAQS2";
+
+import PsychologicalHome from "./assets/screens/PsychologicalDistress/PsychologicalHome";
+import PsychologicalAwaraness from "./assets/screens/PsychologicalDistress/PsychologicalAwaraness";
+import PsychologicalSymptoms from "./assets/screens/PsychologicalDistress/PsychologicalSymptoms";
+import PsychologicalFAQS1 from "./assets/screens/PsychologicalDistress/PsychologicalFAQS1";
+import PsychologicalFAQS2 from "./assets/screens/PsychologicalDistress/PsychologicalFAQS2";
+
+import ManagementHome from "./assets/screens/Management/ManagementHome";
+import ManagementFirstAid from "./assets/screens/Management/ManagementFirstAid";
+import ManagementSelfCare from "./assets/screens/Management/ManagementSelfCare";
+
+import WellbingTipsConcept from "./assets/screens/Wellbeing/WellbingTipsConcept";
+import WellbingTips1 from "./assets/screens/Wellbeing/WellbingTips1";
+import WellbingTips2 from "./assets/screens/Wellbeing/WellbingTips2";
+import WellbingTips3 from "./assets/screens/Wellbeing/WellbingTips3";
+import WellbingTips4 from "./assets/screens/Wellbeing/WellbingTips4";
+import WellbingTips5 from "./assets/screens/Wellbeing/WellbingTips5";
+import WellbingTips6 from "./assets/screens/Wellbeing/WellbingTips6";
+import WellbingTips7 from "./assets/screens/Wellbeing/WellbingTips7";
 
 // Dass-21 Screens
 import Q1 from "./assets/screens/Dass21/Q1";
@@ -74,7 +109,9 @@ import Q18 from "./assets/screens/Dass21/Q18";
 import Q19 from "./assets/screens/Dass21/Q19";
 import Q20 from "./assets/screens/Dass21/Q20";
 import Q21 from "./assets/screens/Dass21/Q21";
-import Result from "./assets/screens/Dass21/Result";
+import ResultModerate from "./assets/screens/Dass21/ResultModerate";
+import ResultSevere from "./assets/screens/Dass21/ResultSevere";
+import ResultNormal from "./assets/screens/Dass21/ResultNormal";
 
 const Stack = createStackNavigator();
 
@@ -123,7 +160,6 @@ function App() {
           component={MentalHealthConcept}
           options={{ title: "MentalHealthConcept" }}
         />
-        {/* Below part is Profile */}
         <Stack.Screen
           name="ProfileMain"
           component={ProfileMain}
@@ -132,7 +168,7 @@ function App() {
         <Stack.Screen
           name="AdherenceAssessment"
           component={AdherenceAssessment}
-          options={{ title: "AdherenceAssessment " }}
+          options={{ title: "AdherenceAssessment" }}
         />
         <Stack.Screen
           name="MedicationReminder"
@@ -159,11 +195,20 @@ function App() {
           component={ProgressReport}
           options={{ title: "ProgressReport" }}
         />
-        {/* Below part is Dass-21 */}
         <Stack.Screen
-          name="Result"
-          component={Result}
-          options={{ title: "Result" }}
+          name="ResultModerate"
+          component={ResultModerate}
+          options={{ title: "ResultModerate" }}
+        />
+        <Stack.Screen
+          name="ResultSevere"
+          component={ResultSevere}
+          options={{ title: "ResultSevere" }}
+        />
+        <Stack.Screen
+          name="ResultNormal"
+          component={ResultNormal}
+          options={{ title: "ResultNormal" }}
         />
         <Stack.Screen
           name="FAQS"
@@ -276,9 +321,9 @@ function App() {
           options={{ title: "BreathingFAQ2" }}
         />
         <Stack.Screen
-          name="ProgressiveFAQ"
-          component={ProgressiveFAQ}
-          options={{ title: "ProgressiveFAQ" }}
+          name="ProgressiveConcept"
+          component={ProgressiveConcept}
+          options={{ title: "ProgressiveConcept" }}
         />
         <Stack.Screen
           name="ProgressiveTech1"
@@ -286,9 +331,9 @@ function App() {
           options={{ title: "ProgressiveTech1" }}
         />
         <Stack.Screen
-          name="ProgressiveTech2"
-          component={ProgressiveTech2}
-          options={{ title: "ProgressiveTech2" }}
+          name="ProgressiveFAQ"
+          component={ProgressiveFAQ}
+          options={{ title: "ProgressiveFAQ" }}
         />
         <Stack.Screen
           name="GratitudeFAQ1"
@@ -304,6 +349,156 @@ function App() {
           name="GratitudeFAQ3"
           component={GratitudeFAQ3}
           options={{ title: "GratitudeFAQ3" }}
+        />
+        <Stack.Screen
+          name="AnxietyHome"
+          component={AnxietyHome}
+          options={{ title: "AnxietyHome" }}
+        />
+        <Stack.Screen
+          name="AnxietyAwareness"
+          component={AnxietyAwareness}
+          options={{ title: "AnxietyAwareness" }}
+        />
+        <Stack.Screen
+          name="AnxietySymptoms"
+          component={AnxietySymptoms}
+          options={{ title: "AnxietySymptoms" }}
+        />
+        <Stack.Screen
+          name="AnxietyTreatment"
+          component={AnxietyTreatment}
+          options={{ title: "AnxietyTreatment" }}
+        />
+        <Stack.Screen
+          name="AnxietyFAQS1"
+          component={AnxietyFAQS1}
+          options={{ title: "AnxietyFAQS1" }}
+        />
+        <Stack.Screen
+          name="AnxietyFAQS2"
+          component={AnxietyFAQS2}
+          options={{ title: "AnxietyFAQS2" }}
+        />
+        <Stack.Screen
+          name="AnxietyFAQS3"
+          component={AnxietyFAQS3}
+          options={{ title: "AnxietyFAQS3" }}
+        />
+        <Stack.Screen
+          name="DepressionHome"
+          component={DepressionHome}
+          options={{ title: "DepressionHome" }}
+        />
+        <Stack.Screen
+          name="DepressionAwarness"
+          component={DepressionAwarness}
+          options={{ title: "DepressionAwarness" }}
+        />
+        <Stack.Screen
+          name="DepressionSymptoms"
+          component={DepressionSymptoms}
+          options={{ title: "DepressionSymptoms" }}
+        />
+        <Stack.Screen
+          name="DepressionTreatment"
+          component={DepressionTreatment}
+          options={{ title: "DepressionTreatment" }}
+        />
+        <Stack.Screen
+          name="DepressionSelfCare"
+          component={DepressionSelfCare}
+          options={{ title: "DepressionSelfCare" }}
+        />
+        <Stack.Screen
+          name="DepressionFAQS1"
+          component={DepressionFAQS1}
+          options={{ title: "DepressionFAQS1" }}
+        />
+        <Stack.Screen
+          name="DepressionFAQS2"
+          component={DepressionFAQS2}
+          options={{ title: "DepressionFAQS2" }}
+        />
+        <Stack.Screen
+          name="PsychologicalHome"
+          component={PsychologicalHome}
+          options={{ title: "PsychologicalHome" }}
+        />
+        <Stack.Screen
+          name="PsychologicalAwaraness"
+          component={PsychologicalAwaraness}
+          options={{ title: "PsychologicalAwaraness" }}
+        />
+        <Stack.Screen
+          name="PsychologicalSymptoms"
+          component={PsychologicalSymptoms}
+          options={{ title: "PsychologicalSymptoms" }}
+        />
+        <Stack.Screen
+          name="PsychologicalFAQS1"
+          component={PsychologicalFAQS1}
+          options={{ title: "PsychologicalFAQS1" }}
+        />
+        <Stack.Screen
+          name="PsychologicalFAQS2"
+          component={PsychologicalFAQS2}
+          options={{ title: "PsychologicalFAQS2" }}
+        />
+        <Stack.Screen
+          name="ManagementHome"
+          component={ManagementHome}
+          options={{ title: "ManagementHome" }}
+        />
+        <Stack.Screen
+          name="ManagementFirstAid"
+          component={ManagementFirstAid}
+          options={{ title: "ManagementFirstAid" }}
+        />
+        <Stack.Screen
+          name="ManagementSelfCare"
+          component={ManagementSelfCare}
+          options={{ title: "ManagementSelfCare" }}
+        />
+        <Stack.Screen
+          name="WellbingTipsConcept"
+          component={WellbingTipsConcept}
+          options={{ title: "WellbingTipsConcept" }}
+        />
+        <Stack.Screen
+          name="WellbingTips1"
+          component={WellbingTips1}
+          options={{ title: "WellbingTips1" }}
+        />
+        <Stack.Screen
+          name="WellbingTips2"
+          component={WellbingTips2}
+          options={{ title: "WellbingTips2" }}
+        />
+        <Stack.Screen
+          name="WellbingTips3"
+          component={WellbingTips3}
+          options={{ title: "WellbingTips3" }}
+        />
+        <Stack.Screen
+          name="WellbingTips4"
+          component={WellbingTips4}
+          options={{ title: "WellbingTips4" }}
+        />
+        <Stack.Screen
+          name="WellbingTips5"
+          component={WellbingTips5}
+          options={{ title: "WellbingTips5" }}
+        />
+        <Stack.Screen
+          name="WellbingTips6"
+          component={WellbingTips6}
+          options={{ title: "WellbingTips6" }}
+        />
+        <Stack.Screen
+          name="WellbingTips7"
+          component={WellbingTips7}
+          options={{ title: "WellbingTips7" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

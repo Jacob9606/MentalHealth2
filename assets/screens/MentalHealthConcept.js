@@ -1,28 +1,49 @@
 import React from "react";
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const MentalHealthConcept = () => {
+  const navigation = useNavigation();
+
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.header}>Mental Health Concept</Text>
-      <View style={styles.section}>
-        <Text style={styles.subHeader}>Mental Health</Text>
-        <Text style={styles.text}>
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Mental Health Concept</Text>
+      </View>
+      <View style={styles.content}>
+        <Text style={styles.questionText}>Mental Health</Text>
+        <Text style={styles.answerText}>
           • Mental health is the condition of being well-balanced in your
           emotions, thoughts, and social interactions. It means you can cope
           with stress, have positive self-esteem, and enjoy healthy
-          relationships with others.
+          relationships with others. {"\n"}
         </Text>
-      </View>
-
-      <View style={styles.section}>
-        <Text style={styles.subHeader}>Mental Illness:</Text>
-        <Text style={styles.text}>
+        <Text style={styles.questionText}>Mental illness:</Text>
+        <Text style={styles.answerText}>
           • A state of psychological, social, spiritual and/physical illness
-          which interferes with an individual's thinking, perception of the
+          which interferes with an individual"`"s thinking, perception of the
           environment, social relationships, and the ability to adapt to
           changing environment.
         </Text>
+      </View>
+
+      <View style={styles.iconContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <AntDesign name="home" size={28} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("")}>
+          <AntDesign name="arrowright" size={24} color="black" />
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -30,29 +51,75 @@ const MentalHealthConcept = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginHorizontal: 10,
-    backgroundColor: "#00BFFF", // 배경색은 디자인에 맞게 조정
+    flexGrow: 1,
+    backgroundColor: "#00BFFF", // Adjusted to match the screenshot
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 20,
   },
   header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginVertical: 20,
-    textAlign: "center",
-    color: "#000", // 텍스트 색상은 디자인에 맞게 조정
-  },
-  section: {
     marginBottom: 20,
   },
-  subHeader: {
-    fontSize: 20,
+  headerText: {
+    color: "black", // Adjusted to match the screenshot (navy blue)
+    fontSize: 24,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  content: {
+    backgroundColor: "#FFFFFF", // White background for the content
+    borderRadius: 20,
+    padding: 20,
+    marginBottom: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  questionText: {
+    color: "black", // Text color adjusted to match the screenshot
+    fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
   },
-  text: {
+  answerText: {
+    color: "#333333", // Dark grey color for the text
+    fontSize: 16,
+    fontWeight: "400",
+    lineHeight: 24,
+  },
+  button: {
+    backgroundColor: "#1E90FF", // Dodger blue background for the button
+    paddingHorizontal: 30,
+    paddingVertical: 10,
+    borderRadius: 25,
+    alignSelf: "stretch",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#FFFFFF", // White text for the button
     fontSize: 18,
-    lineHeight: 24, // 줄 간격은 디자인에 맞게 조정
-    color: "#333", // 텍스트 색상은 디자인에 맞게 조정
+    fontWeight: "bold",
+  },
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    position: "absolute",
+    bottom: 30,
   },
 });
 

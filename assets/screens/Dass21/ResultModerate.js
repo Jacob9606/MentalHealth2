@@ -1,24 +1,31 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
-import { AntDesign, MaterialIcons } from "@expo/vector-icons";
-const MindfulnessTechniques10 = () => {
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native"; // 추가
+
+const ResultModerate = () => {
+  const navigation = useNavigation(); // 추가
+
+  // Replace with actual data/logic
+  const score = 6;
+  const level = "Moderate";
+
+  const navigateToFAQs = () => {
+    navigation.navigate("FAQS");
+  };
+
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Mindfulness Techniques</Text>
+        <Text style={styles.headerText}>Your Result</Text>
       </View>
-      <View style={styles.content}>
-        <Text style={styles.techniqueText}>
-          10. As you go to sleep, take mindful breathing.
-        </Text>
+      <View style={styles.resultBox}>
+        <Text style={styles.scoreText}>Score: {score}</Text>
+        <Text style={styles.levelText}>Level: {level}</Text>
       </View>
-    </ScrollView>
+      <TouchableOpacity style={styles.button} onPress={navigateToFAQs}>
+        <Text style={styles.buttonText}>FAQs</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
@@ -38,11 +45,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
   },
-  content: {
+  resultBox: {
     backgroundColor: "#fff",
     borderRadius: 20,
     padding: 20,
     marginBottom: 20,
+    alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -52,18 +60,22 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  techniqueText: {
+  scoreText: {
+    fontSize: 20,
+    fontWeight: "500",
     color: "#333",
-    fontSize: 16,
-    fontWeight: "400",
-    lineHeight: 24,
+  },
+  levelText: {
+    fontSize: 20,
+    fontWeight: "500",
+    color: "#333",
+    marginTop: 10,
   },
   button: {
     backgroundColor: "#fff",
     paddingHorizontal: 30,
     paddingVertical: 10,
     borderRadius: 25,
-    alignSelf: "center",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -80,4 +92,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MindfulnessTechniques10;
+export default ResultModerate;

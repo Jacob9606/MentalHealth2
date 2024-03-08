@@ -6,12 +6,16 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const ProgressiveFAQ = () => {
+  const navigation = useNavigation();
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>FAQ</Text>
+        <Text style={styles.headerText}>Progressive FAQ</Text>
       </View>
       <View style={styles.content}>
         <Text style={styles.questionText}>
@@ -23,6 +27,19 @@ const ProgressiveFAQ = () => {
           stress, phobia, hypertension, anxiety, depression and achieving a deep
           state of relaxation.
         </Text>
+      </View>
+      <View style={styles.iconContainer}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ProgressiveTech1")}
+        >
+          <AntDesign name="arrowleft" size={24} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <AntDesign name="home" size={28} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("")}>
+          <AntDesign name="arrowright" size={24} color="black" />
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -91,6 +108,14 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  iconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    position: "absolute",
+    bottom: 30,
   },
 });
 

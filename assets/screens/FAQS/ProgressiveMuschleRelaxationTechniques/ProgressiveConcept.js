@@ -9,44 +9,42 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const BreathingFAQ2 = () => {
+const ProgressiveConcept = () => {
   const navigation = useNavigation();
+
+  const onNextPress = () => {
+    // Navigation logic to go to the next FAQ
+    navigation.navigate("ProgressiveTech1");
+  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Breathing exercise Technique FAQ</Text>
+        <Text style={styles.headerText}>Progressive FAQ</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.questionText}>Breathing Exercise</Text>
-        <Text style={styles.answerText}>
-          1. Sit down in a comfortable place.
+        <Text style={styles.questionText}>
+          General instruction for Progressive Muscle Relaxation
         </Text>
         <Text style={styles.answerText}>
-          2. Inhale for 4 seconds through your nose
-        </Text>
-        <Text style={styles.answerText}>
-          3. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          4. Exhale through your mouth for 4 seconds
-        </Text>
-        <Text style={styles.answerText}>
-          5. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          6. Repeat 4 times as a set or as many sets as possible.
+          Before and during muscle relaxation techniques tensing for 4 second.
+          Relax and feel relaxation for 10 seconds. For instance, count in
+          Amharic 41,42,43……… counting in English 1001, 1002, 1003….
         </Text>
       </View>
-
+      <TouchableOpacity style={styles.button} onPress={onNextPress}>
+        <Text style={styles.buttonText}>Next</Text>
+      </TouchableOpacity>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("BreathingFAQ1")}>
+        <TouchableOpacity onPress={() => navigation.navigate("FAQS")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <AntDesign name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ProgressiveTech1")}
+        >
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -128,4 +126,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BreathingFAQ2;
+export default ProgressiveConcept;

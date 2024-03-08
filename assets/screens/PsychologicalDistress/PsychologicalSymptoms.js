@@ -9,38 +9,52 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const BreathingFAQ2 = () => {
+const PsychologicalSymptoms = () => {
   const navigation = useNavigation();
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Breathing exercise Technique FAQ</Text>
+        <Text style={styles.headerText}>Symptoms</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.questionText}>Breathing Exercise</Text>
         <Text style={styles.answerText}>
-          1. Sit down in a comfortable place.
+          • When we are stressed, we have headaches, nausea, or trouble
+          sleeping, difficulty relaxing, irritable or anxious. Stress can worsen
+          pre-existing health problems. {"\n"}
+        </Text>
+        <Text style={styles.questionText}>• 3.1 Managing stress</Text>
+        <Text style={styles.answerText}>
+          {"\n"}• Keep a daily routine: Planning our day, maintaining regular
+          mealtimes, family time, exercise, chores, and other recreational
+          activities.
         </Text>
         <Text style={styles.answerText}>
-          2. Inhale for 4 seconds through your nose
+          {"\n"} • Get plenty of sleep: Both the body and the mind benefit from
+          a good night's sleep. Establish a consistent sleep schedule by
+          retiring and waking up at the same time each day. Minimize the use of
+          electronic devices such as televisions, computers, and smartphones
+          before bedtime. Avoid consuming large meals, caffeine, and alcohol
+          close to bedtime.
         </Text>
         <Text style={styles.answerText}>
-          3. Hold your breath for 4 seconds.
+          {"\n"}• Keep a daily routine: Planning our day, maintaining regular
+          mealtimes, family time, exercise, chores, and other recreational
+          activities.
         </Text>
         <Text style={styles.answerText}>
-          4. Exhale through your mouth for 4 seconds
+          • Eat healthy​: What we eat, and drink can affect our health. Drink
+          enough fluids.
         </Text>
         <Text style={styles.answerText}>
-          5. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          6. Repeat 4 times as a set or as many sets as possible.
+          {"\n"} • Exercise regularly: Regular daily exercise can help to reduce
+          stress. This can include walking, as well as intensive physical
+          exercise.
         </Text>
       </View>
 
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("BreathingFAQ1")}>
+        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
@@ -86,7 +100,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "#000080", // Text color adjusted to match the screenshot
+    color: "black", // Text color adjusted to match the screenshot
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
@@ -124,8 +138,8 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 20,
     position: "absolute",
-    bottom: 30,
+    bottom: 0,
   },
 });
 
-export default BreathingFAQ2;
+export default PsychologicalSymptoms;

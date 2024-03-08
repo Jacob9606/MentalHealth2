@@ -56,7 +56,7 @@ const FAQs = () => {
                 navigation.navigate("BreathingFAQ1");
                 break;
               case "Progressive muscle relaxation Techniques":
-                navigation.navigate("ProgressiveFAQ");
+                navigation.navigate("ProgressiveConcept");
                 break;
               default:
                 navigateToFAQDetail(item);

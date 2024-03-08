@@ -21,7 +21,7 @@ export default function HomeScreen({ navigation }) {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => console.log("Depression Pressed")}
+            onPress={() => navigation.navigate("DepressionHome")}
           >
             <Text style={styles.buttonText}>Depression</Text>
           </TouchableOpacity>
@@ -29,13 +29,13 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.row}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => console.log("Anxiety Pressed")}
+            onPress={() => navigation.navigate("AnxietyHome")}
           >
             <Text style={styles.buttonText}>Anxiety</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => console.log("Psychological Distress Pressed")}
+            onPress={() => navigation.navigate("PsychologicalHome")}
           >
             <Text style={styles.buttonText}>Psychological Distress</Text>
           </TouchableOpacity>

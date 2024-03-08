@@ -9,38 +9,53 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const BreathingFAQ2 = () => {
+const DepressionSelfCare = () => {
   const navigation = useNavigation();
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Breathing exercise Technique FAQ</Text>
+        <Text style={styles.headerText}>Self-Care</Text>
       </View>
+
       <View style={styles.content}>
-        <Text style={styles.questionText}>Breathing Exercise</Text>
         <Text style={styles.answerText}>
-          1. Sit down in a comfortable place.
+          • Suffering from depression can be extremely difficult to cope with.
+          But by doing the following activities you can recover from low mood:
         </Text>
         <Text style={styles.answerText}>
-          2. Inhale for 4 seconds through your nose
+          {"\n"} 1. Talk about how you"`"re feeling. Talking to your doctor or
+          someone you trust can help you feel better and less alone.
         </Text>
         <Text style={styles.answerText}>
-          3. Hold your breath for 4 seconds.
+          {"\n"} 2. Eat well. A healthy diet can lift your mood and maintain
+          your mental health.
         </Text>
         <Text style={styles.answerText}>
-          4. Exhale through your mouth for 4 seconds
+          {"\n"} 3. Stay physically active. Exercise may feel like the last
+          thing you want to do, but it can ease the symptoms of depression.
+          Research suggests it may be as effective as antidepressants in helping
+          you feel better.
         </Text>
         <Text style={styles.answerText}>
-          5. Hold your breath for 4 seconds.
+          {"\n"} 4. Spend time in nature. Being in nature can make us feel
+          happier, feel our lives are more worthwhile, and reduce our levels of
+          depression.
         </Text>
         <Text style={styles.answerText}>
-          6. Repeat 4 times as a set or as many sets as possible.
+          {"\n"} 5. Avoid cigarettes and alcohol
+        </Text>
+        <Text style={styles.answerText}>
+          {"\n"} 6. Mindfulness exercises are ways of paying attention to the
+          present moment using techniques like meditation, breathing, and yoga.
+        </Text>
+        <Text style={styles.answerText}>
+          {"\n"} 7. Spirituality: belief in your God, prayer, and hymns.
         </Text>
       </View>
 
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("BreathingFAQ1")}>
+        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
@@ -66,7 +81,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#000080", // Adjusted to match the screenshot (navy blue)
+    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
@@ -86,7 +101,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "#000080", // Text color adjusted to match the screenshot
+    color: "black", // Text color adjusted to match the screenshot
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
@@ -124,8 +139,8 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 20,
     position: "absolute",
-    bottom: 30,
+    bottom: 10,
   },
 });
 
-export default BreathingFAQ2;
+export default DepressionSelfCare;

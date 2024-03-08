@@ -9,38 +9,37 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const BreathingFAQ2 = () => {
+const AnxietyTreatment = () => {
   const navigation = useNavigation();
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Breathing exercise Technique FAQ</Text>
+        <Text style={styles.headerText}>Treatment</Text>
       </View>
+
       <View style={styles.content}>
-        <Text style={styles.questionText}>Breathing Exercise</Text>
+        <Text style={styles.questionText}>Meditation</Text>
         <Text style={styles.answerText}>
-          1. Sit down in a comfortable place.
+          • Treatment of anxiety disorder can range from 6- to 12 months. Some
+          evidence indicates that treatment sometimes takes long-term. The
+          medications can manage both the physical and psychological symptoms of
+          anxiety.
         </Text>
         <Text style={styles.answerText}>
-          2. Inhale for 4 seconds through your nose
+          {"\n"}• Treatment of anxiety disorder includes benzodiazepines, SSRI,
+          buspirone, and venlafaxine. For patients who are psychologically
+          minded and motivated to understand the sources of their anxiety,
+          psychotherapy may be the treatment of choice.
         </Text>
         <Text style={styles.answerText}>
-          3. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          4. Exhale through your mouth for 4 seconds
-        </Text>
-        <Text style={styles.answerText}>
-          5. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          6. Repeat 4 times as a set or as many sets as possible.
+          {"\n"}• Mindful meditation decreases physical symptoms of distress by
+          balancing sympathetic and parasympathetic responses.
         </Text>
       </View>
 
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("BreathingFAQ1")}>
+        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#000080", // Adjusted to match the screenshot (navy blue)
+    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "#000080", // Text color adjusted to match the screenshot
+    color: "black", // Text color adjusted to match the screenshot
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
@@ -124,8 +123,8 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 20,
     position: "absolute",
-    bottom: 30,
+    bottom: 10,
   },
 });
 
-export default BreathingFAQ2;
+export default AnxietyTreatment;

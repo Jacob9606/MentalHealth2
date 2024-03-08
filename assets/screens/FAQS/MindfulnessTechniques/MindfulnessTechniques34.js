@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 const MindfulnessTechniques34 = () => {
   const navigation = useNavigation();
 

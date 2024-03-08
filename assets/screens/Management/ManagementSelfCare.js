@@ -9,38 +9,43 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const BreathingFAQ2 = () => {
+const ManagementSelfCare = () => {
   const navigation = useNavigation();
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Breathing exercise Technique FAQ</Text>
+        <Text style={styles.headerText}>Self-care</Text>
       </View>
+
       <View style={styles.content}>
-        <Text style={styles.questionText}>Breathing Exercise</Text>
+        <Text style={styles.questionText}>Through the senses</Text>
+
         <Text style={styles.answerText}>
-          1. Sit down in a comfortable place.
+          {"\n"} 1. Vision: Look at a picture or poster that you like. Look at
+          the stars. Look at nature around you.
         </Text>
         <Text style={styles.answerText}>
-          2. Inhale for 4 seconds through your nose
+          {"\n"} 2. Hearing: Listen to beautiful or soothing music or spiritual.
+          Pay attention to the sounds of nature (waves, birds, rainfall).
         </Text>
         <Text style={styles.answerText}>
-          3. Hold your breath for 4 seconds.
+          {"\n"} 3. Smell: Put on your favorite lotion/perfume. Notice the good
+          smells around you; roasting coffee, flowers, baking bread.
         </Text>
         <Text style={styles.answerText}>
-          4. Exhale through your mouth for 4 seconds
+          {"\n"} 4. Taste: Really taste the food you eat and chew it slowly.
+          Have a good meal. Have your favorite soothing drink (tea, hot
+          chocolate).
         </Text>
         <Text style={styles.answerText}>
-          5. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          6. Repeat 4 times as a set or as many sets as possible.
+          {"\n"} 5. Touch: Take a bubble bath or hot shower. Have a massage. Hug
+          someone. Brush or braid your hair.
         </Text>
       </View>
 
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("BreathingFAQ1")}>
+        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
@@ -66,7 +71,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#000080", // Adjusted to match the screenshot (navy blue)
+    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
@@ -86,7 +91,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "#000080", // Text color adjusted to match the screenshot
+    color: "black", // Text color adjusted to match the screenshot
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
@@ -124,8 +129,8 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 20,
     position: "absolute",
-    bottom: 30,
+    bottom: 10,
   },
 });
 
-export default BreathingFAQ2;
+export default ManagementSelfCare;

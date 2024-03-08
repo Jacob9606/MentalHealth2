@@ -9,38 +9,27 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const BreathingFAQ2 = () => {
+const PsychologicalAwaraness = () => {
   const navigation = useNavigation();
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Breathing exercise Technique FAQ</Text>
+        <Text style={styles.headerText}>Awareness</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.questionText}>Breathing Exercise</Text>
         <Text style={styles.answerText}>
-          1. Sit down in a comfortable place.
-        </Text>
-        <Text style={styles.answerText}>
-          2. Inhale for 4 seconds through your nose
-        </Text>
-        <Text style={styles.answerText}>
-          3. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          4. Exhale through your mouth for 4 seconds
-        </Text>
-        <Text style={styles.answerText}>
-          5. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          6. Repeat 4 times as a set or as many sets as possible.
+          • Stress happens to everyone, every day. Stress general response to
+          stressful situations (tough commute, work problems, moving). Distress
+          requires additional support, some people seek counseling, spiritual
+          guidance to learn additional coping skills. The most common mental
+          health conditions caused by stressful situations are anxiety and
+          depression.
         </Text>
       </View>
 
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("BreathingFAQ1")}>
+        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
@@ -128,4 +117,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BreathingFAQ2;
+export default PsychologicalAwaraness;

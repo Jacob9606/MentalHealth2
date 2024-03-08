@@ -9,38 +9,42 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const BreathingFAQ2 = () => {
+const PsychologicalFAQS1 = () => {
   const navigation = useNavigation();
+
+  const onNextPress = () => {
+    // Navigation logic to go to the next FAQ
+    navigation.navigate("PsychologicalFAQS2");
+  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Breathing exercise Technique FAQ</Text>
+        <Text style={styles.headerText}>FAQs</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.questionText}>Breathing Exercise</Text>
+        <Text style={styles.questionText}>How does stress affect us?</Text>
         <Text style={styles.answerText}>
-          1. Sit down in a comfortable place.
+          • Stress affects both the mind and the body. Too much stress can cause
+          physical and mental health problems. Learning how to cope with stress
+          can help us feel less overwhelmed and support our mental and physical
+          well-being.
         </Text>
+        <Text style={styles.questionText}>Sucide</Text>
         <Text style={styles.answerText}>
-          2. Inhale for 4 seconds through your nose
-        </Text>
-        <Text style={styles.answerText}>
-          3. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          4. Exhale through your mouth for 4 seconds
-        </Text>
-        <Text style={styles.answerText}>
-          5. Hold your breath for 4 seconds.
-        </Text>
-        <Text style={styles.answerText}>
-          6. Repeat 4 times as a set or as many sets as possible.
+          • Stress affects both the mind and the body. Too much stress can cause
+          physical and mental health problems. Learning how to cope with stress
+          can help us feel less overwhelmed and support our mental and physical
+          well-being.
         </Text>
       </View>
-
+      <TouchableOpacity style={styles.button} onPress={onNextPress}>
+        <Text style={styles.buttonText}>Next</Text>
+      </TouchableOpacity>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("BreathingFAQ1")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("PsychologicalHome")}
+        >
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#000080", // Adjusted to match the screenshot (navy blue)
+    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "#000080", // Text color adjusted to match the screenshot
+    color: "black", // Text color adjusted to match the screenshot
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
@@ -124,8 +128,8 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 20,
     position: "absolute",
-    bottom: 30,
+    bottom: 10,
   },
 });
 
-export default BreathingFAQ2;
+export default PsychologicalFAQS1;

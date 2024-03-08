@@ -2,15 +2,15 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native"; // 추가
 
-const Result = () => {
+const ResultNormal = () => {
   const navigation = useNavigation(); // 추가
 
   // Replace with actual data/logic
-  const score = 6;
-  const level = "Moderate";
+  const score = 0;
+  const level = "Normal";
 
   const navigateToFAQs = () => {
-    navigation.navigate("FAQS");
+    navigation.navigate("WellbingTipsConcept");
   };
 
   return (
@@ -23,7 +23,7 @@ const Result = () => {
         <Text style={styles.levelText}>Level: {level}</Text>
       </View>
       <TouchableOpacity style={styles.button} onPress={navigateToFAQs}>
-        <Text style={styles.buttonText}>FAQs</Text>
+        <Text style={styles.buttonText}>TIPS</Text>
       </TouchableOpacity>
     </View>
   );
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Result;
+export default ResultNormal;

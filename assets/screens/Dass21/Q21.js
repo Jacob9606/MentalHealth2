@@ -7,6 +7,11 @@ const Q21 = ({ navigation }) => {
 
   const selectAnswer = (option) => {
     setAnswer(option);
+    if (option === "Always") {
+      navigation.navigate("ResultSevere");
+    } else if (option === "No") {
+      navigation.navigate("ResultNormal");
+    }
   };
 
   return (
@@ -57,7 +62,7 @@ const Q21 = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <MaterialIcons name="home" size={24} color="#00BFFF" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Result")}>
+        <TouchableOpacity onPress={() => navigation.navigate("ResultModerate")}>
           <AntDesign name="stepforward" size={24} color="#00BFFF" />
         </TouchableOpacity>
       </View>
