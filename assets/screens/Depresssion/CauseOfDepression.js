@@ -9,30 +9,37 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const CauseOfDepression = () => {
   const navigation = useNavigation();
-
-  const onNextPress = () => {
-    // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
-  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Cause of Depression</Text>
       </View>
 
       <View style={styles.content}>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          • Multifactorial problems can cause depressive disorder but sometimes
+          the cause of depression is unknown.
+        </Text>
+        <Text style={styles.answerText}>• Sometimes genetics.</Text>
+        <Text style={styles.answerText}>• Stress, stressful life event</Text>
+        <Text style={styles.answerText}>
+          • Some Physical illnesses such as cancer, heart problems, respiratory
+          disease
+        </Text>
+        <Text style={styles.answerText}>
+          • Some treatments like Steroids and other Medicines
+        </Text>
+        <Text style={styles.answerText}>
+          • The illegal drug and drinking alcohol Regularly.
+        </Text>
+        <Text style={styles.answerText}>
+          • In some people, depression can happen Without a clear cause.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+
       <View style={styles.iconContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
@@ -122,4 +129,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AnxietyAwareness;
+export default CauseOfDepression;

@@ -9,38 +9,52 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const ProgressiveConcept = () => {
   const navigation = useNavigation();
 
   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
+    navigation.navigate("ProgressiveTech1");
   };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Progressive Muscle Relaxation</Text>
       </View>
-
       <View style={styles.content}>
+        <Text style={styles.questionText}>
+          Progressive muscle relation is a systematic technique for managing
+          stress, phobia, hypertension, anxiety, depression and achieving a deep
+          state of relaxation.
+        </Text>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          Before and during muscle relaxation techniques tensing for 4 second.
+          Relax and feel relaxation for 10 seconds. For instance, count in
+          Amharic 41,42,43……… counting in English 1001, 1002, 1003….
+        </Text>
+        <Text style={styles.questionText}>
+          {"\n"}General Instructions For Progressive Muscle Relaxation:
+        </Text>
+        <Text style={styles.answerText}>
+          Before and during muscle relaxation techniques tensing for 4 seconds.
+          Relax and feel relaxation for 10 seconds. For instance, count in
+          Amharic 41,42,43……… counting in English 1001, 1002, 1003….
         </Text>
       </View>
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+        <TouchableOpacity onPress={() => navigation.navigate("FAQS")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <AntDesign name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ProgressiveTech1")}
+        >
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -60,7 +74,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
+    color: "#000", // Adjusted to match the screenshot (navy blue)
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
@@ -80,7 +94,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "black", // Text color adjusted to match the screenshot
+    color: "#000", // Text color adjusted to match the screenshot
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
@@ -117,9 +131,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     paddingHorizontal: 20,
-    position: "absolute",
-    bottom: 10,
+
+    bottom: -30,
+    paddingBottom: 30,
   },
 });
 
-export default AnxietyAwareness;
+export default ProgressiveConcept;

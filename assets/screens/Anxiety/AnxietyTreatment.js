@@ -19,22 +19,18 @@ const AnxietyTreatment = () => {
       </View>
 
       <View style={styles.content}>
-        <Text style={styles.questionText}>Meditation</Text>
+        <Text style={styles.answerText}>• Anxiolytic and Antidepressant</Text>
+        <Text style={styles.answerText}>• Psychotherapy</Text>
+        <Text style={styles.answerText}>• Lifestyle Style</Text>
         <Text style={styles.answerText}>
-          • Treatment of anxiety disorder can range from 6- to 12 months. Some
-          evidence indicates that treatment sometimes takes long-term. The
-          medications can manage both the physical and psychological symptoms of
-          anxiety.
+          •Exercise, relaxation Techniques, mindful meditation, self-Management
         </Text>
         <Text style={styles.answerText}>
-          {"\n"}• Treatment of anxiety disorder includes benzodiazepines, SSRI,
-          buspirone, and venlafaxine. For patients who are psychologically
-          minded and motivated to understand the sources of their anxiety,
-          psychotherapy may be the treatment of choice.
+          • Psychotherapy: Cognitive Behavior Therapy.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"}• Mindful meditation decreases physical symptoms of distress by
-          balancing sympathetic and parasympathetic responses.
+          • Treatment takes 6- to 12-months. Some evidence indicates that
+          treatment takes a long time.
         </Text>
       </View>
 

@@ -9,30 +9,51 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const PsychologicalTreatment = () => {
   const navigation = useNavigation();
-
-  const onNextPress = () => {
-    // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
-  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Treatment</Text>
       </View>
-
       <View style={styles.content}>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          Psychological distress is treatable. Talk therapy, self-care
+          strategies such as healthy sleep, exercise, mindful meditation, and
+          medication can all play a role in helping people with psychological
+          distress.
+        </Text>
+
+        <Text style={styles.answerText}>
+          {"\n"}• Problems with anger management
+        </Text>
+        <Text style={styles.answerText}>
+          {"\n"}• Physical symptoms that can't be explained by a medical
+          condition, such as headaches.
+        </Text>
+        <Text style={styles.answerText}>{"\n"}• Low energy levels</Text>
+        <Text style={styles.answerText}>{"\n"}• Isolation</Text>
+        <Text style={styles.answerText}>
+          {"\n"}• Changes in eating or sleeping patterns.
+        </Text>
+        <Text style={styles.answerText}>
+          {"\n"} • Excessive use of alcohol or other substances
+        </Text>
+        <Text style={styles.answerText}>
+          {"\n"}• Thoughts of hurting oneself or others
+        </Text>
+        <Text style={styles.answerText}>
+          • Eat healthy​: What we eat, and drink can affect our health. Drink
+          enough fluids.
+        </Text>
+        <Text style={styles.answerText}>
+          {"\n"} • Exercise regularly: Regular daily exercise can help to reduce
+          stress. This can include walking, as well as intensive physical
+          exercise.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+
       <View style={styles.iconContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
@@ -60,7 +81,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
+    color: "#000080", // Adjusted to match the screenshot (navy blue)
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
@@ -118,8 +139,8 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 20,
     position: "absolute",
-    bottom: 10,
+    bottom: 0,
   },
 });
 
-export default AnxietyAwareness;
+export default PsychologicalTreatment;

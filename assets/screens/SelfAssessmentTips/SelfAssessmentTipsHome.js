@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const FAQs = () => {
+const SelfAssessmentTipsHome = () => {
   const navigation = useNavigation();
 
   const navigateToFAQDetail = (faqKey) => {
@@ -19,32 +19,35 @@ const FAQs = () => {
 
   // faqItems 배열 정의
   const faqItems = [
-    "Mindfulness Techniques",
-    "Meditation Technique",
-    "Meditation for sleep",
+    "Dass-21",
+    "Meditation",
+    "Breathing Exercise",
+    "Progressive Muscle Relaxation",
     "Compassion",
     "Gratitude",
-    "Breathing exercise Technique",
-    "Progressive muscle relaxation Techniques",
+    "Mindfulness",
   ];
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.header}>FAQs</Text>
+      <Text style={styles.header}>Self Assessment & Tips</Text>
       {faqItems.map((item, index) => (
         <TouchableOpacity
           key={index}
           style={styles.button}
           onPress={() => {
             switch (item) {
-              case "Mindfulness Techniques":
-                navigation.navigate("MindfulnessTechniques");
+              case "Dass-21":
+                navigation.navigate("Q1");
                 break;
-              case "Meditation Technique":
+              case "Meditation":
                 navigation.navigate("MeditationTechniqueConcept");
                 break;
-              case "Meditation for sleep":
-                navigation.navigate("MeditationMusic");
+              case "Breathing Exercise":
+                navigation.navigate("BreathingFAQ1");
+                break;
+              case "Progressive Muscle Relaxation":
+                navigation.navigate("ProgressiveConcept");
                 break;
               case "Compassion":
                 navigation.navigate("CompassionFAQ1");
@@ -52,11 +55,8 @@ const FAQs = () => {
               case "Gratitude":
                 navigation.navigate("GratitudeFAQ1");
                 break;
-              case "Breathing exercise Technique":
-                navigation.navigate("BreathingFAQ1");
-                break;
-              case "Progressive muscle relaxation Techniques":
-                navigation.navigate("ProgressiveConcept");
+              case "Mindfulness":
+                navigation.navigate("MindfulnessConcept");
                 break;
               default:
                 navigateToFAQDetail(item);
@@ -110,4 +110,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FAQs;
+export default SelfAssessmentTipsHome;

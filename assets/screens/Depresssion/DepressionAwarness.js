@@ -19,11 +19,13 @@ const DepressionAwarness = () => {
       </View>
       <View style={styles.content}>
         <Text style={styles.answerText}>
-          • Depression is one of the most common mental health disorders. It can
-          affect your mind, body, and behaviour. Different factors can lead to
-          depression, including genetic, neurochemical imbalance in the brain,
-          loss, chronic illness, exposure to abuse, violence, or any negative
-          life events.
+          • Depression is a real illness like other illnesses such as diabetes,
+          cancer, and heart disease.
+        </Text>
+        <Text style={styles.answerText}>
+          {"\n"}• Major depressive disorder impairs thinking, feeling, Physical
+          Health and day-to-day Life. One in four people can be affected in
+          life.
         </Text>
       </View>
       <View style={styles.iconContainer}>
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#000080", // Adjusted to match the screenshot (navy blue)
+    color: "#000", // Adjusted to match the screenshot (navy blue)
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",

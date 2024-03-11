@@ -12,27 +12,37 @@ import { useNavigation } from "@react-navigation/native";
 const AnxietyAwareness = () => {
   const navigation = useNavigation();
 
-  const onNextPress = () => {
-    // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
-  };
-
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Anxiety GAD</Text>
       </View>
 
       <View style={styles.content}>
+        <Text style={styles.questionText}>
+          How Do You Know Generalized Anxiety Disorder?
+        </Text>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          • At least three following symptoms present almost every day for at
+          least 6 months. Symptoms include:
+        </Text>
+        <Text style={styles.answerText}>1.Restlessness</Text>
+        <Text style={styles.answerText}>2. Simply feeling Fatigue</Text>
+
+        <Text style={styles.answerText}>
+          3. Concentration Problem or Mind Empty to be
+        </Text>
+        <Text style={styles.answerText}>4. Frustration</Text>
+        <Text style={styles.answerText}>5. Muscle Stress</Text>
+        <Text style={styles.answerText}>
+          Sleep Disturbance (sleeping problem).
+        </Text>
+        <Text style={styles.answerText}>
+          Excessive worries or Physical Signs affect the individual's social,
+          day-to-day activities, and life.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+
       <View style={styles.iconContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />

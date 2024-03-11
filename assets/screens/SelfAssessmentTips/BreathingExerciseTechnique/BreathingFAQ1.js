@@ -9,38 +9,42 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const BreathingFAQ1 = () => {
   const navigation = useNavigation();
 
   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
+    navigation.navigate("BreathingFAQ2");
   };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Breathing exercise FAQ</Text>
       </View>
-
       <View style={styles.content}>
+        <Text style={styles.questionText}>
+          FAQ: Does Breathing Exercise Relieve Anxiety, Depression or Distress?
+        </Text>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          • Breathing exercises are vital for our well-being, as they affect
+          both our mental and physical health. They can help us cope with
+          stress, anxiety, and depression by reducing their physical and
+          psychological symptoms. They can also promote sleep, which is
+          essential for our rest and recovery.
         </Text>
       </View>
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+        <TouchableOpacity onPress={() => navigation.navigate("FAQS")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <AntDesign name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity onPress={() => navigation.navigate("BreathingFAQ2")}>
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
+    color: "#000080", // Adjusted to match the screenshot (navy blue)
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
@@ -80,7 +84,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "black", // Text color adjusted to match the screenshot
+    color: "#000080", // Text color adjusted to match the screenshot
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
@@ -118,8 +122,8 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 20,
     position: "absolute",
-    bottom: 10,
+    bottom: 30,
   },
 });
 
-export default AnxietyAwareness;
+export default BreathingFAQ1;

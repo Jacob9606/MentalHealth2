@@ -9,38 +9,68 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const RoleOfAntiDepressants = () => {
   const navigation = useNavigation();
 
   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
+    navigation.navigate("SummaryFAQ2");
   };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Role of Anti-Depressants</Text>
       </View>
 
       <View style={styles.content}>
+        <Text style={styles.questionText}>
+          FAQ: What are the Facts about Depression?
+        </Text>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          • Many factors, such as genetics, hormones, stress/trauma, substance
+          abuse, physical illness, and economic or psychological stress can
+          cause depression.
+        </Text>
+        <Text style={styles.answerText}>
+          • Depression is a genuine and treatable illness.
+        </Text>
+        <Text style={styles.answerText}>
+          • Depression is one of the most common mental health disorders.
+        </Text>
+        <Text style={styles.answerText}>
+          • Depression is not a communicable disease.
+        </Text>
+        <Text style={styles.answerText}>
+          • Untreated Depression is a common cause of Suicide.
+        </Text>
+        <Text style={styles.questionText}>
+          FAQ: What are Myths or Misconceptions Depression?
+        </Text>
+        <Text style={styles.answerText}>
+          • It is a weakness rather than an illness.
+        </Text>
+        <Text style={styles.answerText}>
+          • Highly intelligent or highly accomplished people do not get
+          depressed.
+        </Text>
+        <Text style={styles.answerText}>
+          • People with depression are "crazy."
         </Text>
       </View>
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+        <TouchableOpacity onPress={() => navigation.navigate("DepressionHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <AntDesign name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("DepressionSelfCare")}
+        >
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -122,4 +152,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AnxietyAwareness;
+export default RoleOfAntiDepressants;

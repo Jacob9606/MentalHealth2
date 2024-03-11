@@ -9,30 +9,45 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const AnxietyPanicDisorder = () => {
   const navigation = useNavigation();
-
-  const onNextPress = () => {
+  /*   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
-  };
-
+    navigation.navigate("AnxietyPanicDisorder");
+  }; */
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Panic Attack & Panic Disorder</Text>
       </View>
 
       <View style={styles.content}>
+        <Text style={styles.questionText}>
+          Symptoms of Panic Attack/Panic Disorder
+        </Text>
+        <Text style={styles.answerText}>1. heart palpitations</Text>
+        <Text style={styles.answerText}>2. Sweating</Text>
+        <Text style={styles.answerText}>3. Chills</Text>
+        <Text style={styles.answerText}>4. Labored Breathing</Text>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          5. Feeling of chocking and smothering
+        </Text>
+        <Text style={styles.answerText}>6. Chest pain</Text>
+        <Text style={styles.answerText}>7. Nausea, upset stomach</Text>
+        <Text style={styles.answerText}>8. Heat/cold sensatinon</Text>
+        <Text style={styles.answerText}>9. Heat/cold sensation</Text>
+        <Text style={styles.answerText}>10. Hand and leg numbness</Text>
+        <Text style={styles.answerText}>11. Strange feeling</Text>
+        <Text style={styles.answerText}>12. Feeling out of control</Text>
+        <Text style={styles.answerText}>
+          13. Feeling to die/dead To diagnose a panic attack at least 4 symptoms
+          should be present. Panic attack or disorder is treatable, therefore,
+          if you feel some of those symptoms consulting the doctors is ideal.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
+      {/*       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <View style={styles.iconContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
@@ -117,9 +132,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     paddingHorizontal: 20,
-    position: "absolute",
-    bottom: 10,
+
+    bottom: 0,
   },
 });
 
-export default AnxietyAwareness;
+export default AnxietyPanicDisorder;

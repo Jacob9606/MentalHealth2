@@ -6,57 +6,74 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons"; // Expo를 사용한다고 가정합니다.
 import { useNavigation } from "@react-navigation/native";
 
-const PsychologicalSymptoms = () => {
+const SummaryFAQ1 = () => {
   const navigation = useNavigation();
+
   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
-    navigation.navigate("PsychologicalTreatment");
+    navigation.navigate("SummaryFAQ2");
   };
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Symptoms</Text>
+        <Text style={styles.headerText}>Summary FAQ</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.answerText}>
-          Symptoms of psychological distress can vary, even among people who
-          have experienced the same stressor. However, the following are some
-          common symptoms of psychological distress:
+        <Text style={styles.sectionTitle}>
+          FAQ: What Are The Facts About Mental Illness?
         </Text>
-
-        <Text style={styles.answerText}>
-          {"\n"}• Problems with anger management
+        <Text style={styles.listItem}>
+          - Mental illness is common to all (universal).
         </Text>
-        <Text style={styles.answerText}>
-          • Physical symptoms that can't be explained by a medical condition,
-          such as headaches.
+        <Text style={styles.listItem}>
+          - Caused by a complex interplay of biopsychosocial factors.
         </Text>
-        <Text style={styles.answerText}>{"\n"}• Low energy levels</Text>
-        <Text style={styles.answerText}>{"\n"}• Isolation</Text>
-        <Text style={styles.answerText}>
-          • Changes in eating or sleeping patterns.
+        <Text style={styles.listItem}>
+          - With the right kind of help, most recover and lead healthy,
+          productive, and satisfying lives.
         </Text>
-        <Text style={styles.answerText}>
-          • Excessive use of alcohol or other substances
+        <Text style={styles.sectionTitle}>
+          {"\n"}FAQ: FAQ: What Are Myths or Misconceptions About Mental
+          Illnesses?
         </Text>
-        <Text style={styles.answerText}>
-          • Thoughts of hurting oneself or others
+        <Text style={styles.listItem}>
+          - Mental illness only affects a few people.
+        </Text>
+        <Text style={styles.listItem}>
+          - People with a mental illness never get better.
+        </Text>
+        <Text style={styles.sectionTitle}>
+          {"\n"}
+          FAQ: What Are The Misconceptions of Mental Illness in Ethiopia?
+        </Text>
+        <Text style={styles.listItem}>
+          - Spirit possession (likift, zar, wuqabi), Punishment for sins, Evil
+          eye.
+        </Text>
+        <Text style={styles.listItem}>
+          - Bewitched/cursed, Thinking too much.
+        </Text>
+        <Text style={styles.listItem}>
+          - Exposure to cold air berd, Exposure to sun rays (Mitch)
         </Text>
       </View>
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+        <TouchableOpacity onPress={() => navigation.navigate("FAQS")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-          <AntDesign name="home" size={28} color="black" />
+          <MaterialIcons name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationTechniqueBasics")}
+        >
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -67,7 +84,7 @@ const PsychologicalSymptoms = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#00BFFF", // Adjusted to match the screenshot
+    backgroundColor: "#00BFFF",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -76,13 +93,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#000", // Adjusted to match the screenshot (navy blue)
+    color: "#fff",
     fontSize: 24,
     fontWeight: "bold",
-    textAlign: "center",
   },
   content: {
-    backgroundColor: "#FFFFFF", // White background for the content
+    backgroundColor: "#fff",
     borderRadius: 20,
     padding: 20,
     marginBottom: 20,
@@ -95,20 +111,20 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  questionText: {
-    color: "black", // Text color adjusted to match the screenshot
+  sectionTitle: {
+    color: "#333",
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
   },
-  answerText: {
-    color: "#333333", // Dark grey color for the text
+  listItem: {
+    color: "#333",
     fontSize: 16,
     fontWeight: "400",
     lineHeight: 24,
   },
   button: {
-    backgroundColor: "#1E90FF", // Dodger blue background for the button
+    backgroundColor: "#fff",
     paddingHorizontal: 30,
     paddingVertical: 10,
     borderRadius: 25,
@@ -124,7 +140,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    color: "#FFFFFF", // White text for the button
+    color: "#4A90E2",
     fontSize: 18,
     fontWeight: "bold",
   },
@@ -133,9 +149,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     paddingHorizontal: 20,
-    position: "absolute",
-    bottom: 0,
+
+    bottom: -10, // 아이콘 컨테이너를 화면 아래에 위치시킵니다.
   },
 });
 
-export default PsychologicalSymptoms;
+export default SummaryFAQ1;

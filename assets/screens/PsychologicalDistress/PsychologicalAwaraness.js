@@ -19,12 +19,17 @@ const PsychologicalAwaraness = () => {
       </View>
       <View style={styles.content}>
         <Text style={styles.answerText}>
-          • Stress happens to everyone, every day. Stress general response to
-          stressful situations (tough commute, work problems, moving). Distress
-          requires additional support, some people seek counseling, spiritual
-          guidance to learn additional coping skills. The most common mental
-          health conditions caused by stressful situations are anxiety and
-          depression.
+          • Psychological distress can be a precursor to a mental illness.
+          However, experiencing psychological distress does not always indicate
+          the presence of a mental health disorder.
+        </Text>
+        <Text style={styles.answerText}>
+          {"\n "}• There are any number of situations that can cause stress.
+          common stressors include relationship conflicts at home, new or
+          increasing work responsibilities, increasing demands, financial
+          strain, loss of a loved one, health problems, moving to a new
+          location, exposure to one or more traumatic incidents, such as a car
+          accident or a violent crime.
         </Text>
       </View>
 

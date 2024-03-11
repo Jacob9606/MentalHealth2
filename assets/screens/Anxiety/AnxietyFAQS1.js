@@ -25,20 +25,31 @@ const AnxietyFAQS1 = () => {
 
       <View style={styles.content}>
         <Text style={styles.questionText}>
-          1. what are the facts and misconception about mental illness?
+          1. FAQ: What are the Facts about anxiety?
         </Text>
         <Text style={styles.answerText}>
-          • Myth: Mental illness only affects a few people.
+          • Anxiety can be caused by many factors, such as genetics, hormones,
+          stress/trauma, substance abuse, physical illness, and economic or
+          psychological stress.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"}• Fact: Mental illness is common to all(universal)
+          {"\n"}• Anxiety is a treatable illness.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"}• Myth: People with a mental illness never get better.
+          {"\n"}• Anxiety is one of the most common mental health disorders.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"}• Fact: With the right kind of help, most recover and lead
-          healthy, productive, and satisfying lives.
+          {"\n"}• Anxiety is not a communicable disease.
+        </Text>
+        <Text style={styles.questionText}>
+          2. FAQ: What are misconceptions about anxiety?
+        </Text>
+        <Text style={styles.answerText}>•People with anxiety are "crazy."</Text>
+        <Text style={styles.answerText}>
+          • Medications given to treat anxiety are addictive.
+        </Text>
+        <Text style={styles.answerText}>
+          • Medication given for anxiety is lifelong.
         </Text>
       </View>
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
@@ -128,8 +139,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     paddingHorizontal: 20,
-    position: "absolute",
-    bottom: 10,
+
+    bottom: -10,
   },
 });
 

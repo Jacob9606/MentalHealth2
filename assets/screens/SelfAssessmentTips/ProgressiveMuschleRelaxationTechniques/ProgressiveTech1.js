@@ -9,59 +9,77 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const DepressionSelfCare = () => {
+const ProgressiveTech1 = () => {
   const navigation = useNavigation();
+
+  /*   const onNextPress = () => {
+    // Navigation logic to go to the next FAQ
+    navigation.navigate("ProgressiveFAQ");
+  }; */
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Self-Care</Text>
+        <Text style={styles.headerText}>
+          Progressive muscle relaxation Techniques
+        </Text>
       </View>
-
       <View style={styles.content}>
         <Text style={styles.answerText}>
-          • Suffering from depression can be extremely difficult to cope with.
-          But by doing the following activities you can recover from low mood:
+          1. Head: clench left hand and feel the tension. relax and let hand
+          loosely. same for right hand.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"} 1. Talk about how you"`"re feeling. Talking to your doctor or
-          someone you trust can help you feel better and less alone.
+          2. Wrist: bend hand back, helper-extending wrists and relax.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"} 2. Eat well. A healthy diet can lift your mood and maintain
-          your mental health.
+          3.Upper Arm: bend elbow toward shoulders and tense biceps muscle and
+          relax.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"} 3. Stay physically active. Exercise may feel like the last
-          thing you want to do, but it can ease the symptoms of depression.
-          Research suggests it may be as effective as antidepressants in helping
-          you feel better.
+          4. Shoulders: bring shoulders up toward ears and relax; let shoulders
+          drop down.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"} 4. Spend time in nature. Being in nature can make us feel
-          happier, feel our lives are more worthwhile, and reduce our levels of
-          depression.
+          5. Forehead: wrinkle forehead, raise eyebrows and relax.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"} 5. Avoid cigarettes and alcohol
+          6. Eyes: close eyes tightly and relax.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"} 6. Mindfulness exercises are ways of paying attention to the
-          present moment using techniques like meditation, breathing, and yoga.
+          7. Neck: turn head so that chin is over right shoulder. straighten and
+          relax.
         </Text>
         <Text style={styles.answerText}>
-          {"\n"} 7. Spirituality: belief in your God, prayer, and hymns.
+          8. Neck And Jaws: bend head forward, pressing chin against chest.
+          straighten and relax.
+        </Text>
+        <Text style={styles.answerText}>
+          9. Abdomen: tighten stomach muscle and relax.
+        </Text>
+        <Text style={styles.answerText}>
+          10. Back, Thighs: arch back and relax. stretch legs in front of you.
+          tighten thigh muscles and relax.
+        </Text>
+        <Text style={styles.answerText}>
+          11. Hamstrings: push heels down into floor tighten hamstring muscle
+          and relax.
+        </Text>
+        <Text style={styles.answerText}>
+          12. Calves, Feet: point toes toward head and relax. curl toes toward
+          the bottom of feet and relax.
         </Text>
       </View>
-
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+        <TouchableOpacity onPress={() => navigation.navigate("FAQS")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <AntDesign name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ProgressiveTech1")}
+        >
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -72,7 +90,7 @@ const DepressionSelfCare = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#00BFFF", // Adjusted to match the screenshot
+    backgroundColor: "#00BFFF",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -81,13 +99,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
+    color: "#fff",
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
   },
   content: {
-    backgroundColor: "#FFFFFF", // White background for the content
+    backgroundColor: "#fff",
     borderRadius: 20,
     padding: 20,
     marginBottom: 20,
@@ -101,19 +119,19 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "black", // Text color adjusted to match the screenshot
+    color: "#333",
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
   },
   answerText: {
-    color: "#333333", // Dark grey color for the text
+    color: "#333",
     fontSize: 16,
     fontWeight: "400",
     lineHeight: 24,
   },
   button: {
-    backgroundColor: "#1E90FF", // Dodger blue background for the button
+    backgroundColor: "#4A90E2",
     paddingHorizontal: 30,
     paddingVertical: 10,
     borderRadius: 25,
@@ -129,7 +147,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    color: "#FFFFFF", // White text for the button
+    color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
   },
@@ -143,4 +161,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DepressionSelfCare;
+export default ProgressiveTech1;

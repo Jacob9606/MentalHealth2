@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function DepressionHome() {
+export default function MentalHealthConcepsHome() {
   const navigation = useNavigation();
 
   const navigateToScreen = (screenName) => {
@@ -17,13 +17,9 @@ export default function DepressionHome() {
   };
 
   const menuItems = [
-    { name: "Awareness", screen: "DepressionAwarness" },
-    { name: "Cause of Depression", screen: "CauseOfDepression" },
-    { name: "Depressive Disorder", screen: "DepressiveDisorder" },
-    { name: "Suicide Behaviour", screen: "SuicideBehaviour" },
-    { name: "Treatmnet", screen: "DepressionTreatmentConcept" },
-    { name: "Role of Anti-Depressant", screen: "RoleOfAntiDepressants" },
-    { name: "SummaryFAQ", screen: "SummaryFAQ1" },
+    { name: "Mental illness", screen: "MentalIllness" },
+    { name: "Warning Signs & Symptoms", screen: "WarningSignsSymptoms" },
+    { name: "Summary FAQs", screen: "SummaryFAQ1" },
   ];
 
   return (
@@ -33,7 +29,7 @@ export default function DepressionHome() {
           source={require("../../images/MentalHealthLogo.png")}
           style={styles.logo}
         />
-        <Text style={styles.logoText}>Mental Health Solutions</Text>
+        <Text style={styles.logoText}>Mental Health Concepts</Text>
       </View>
       <View style={styles.menu}>
         {menuItems.map((item, index) => (
@@ -61,6 +57,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#00BFFF",
+    marginBottom: 50,
   },
   logoText: {
     marginTop: 15,

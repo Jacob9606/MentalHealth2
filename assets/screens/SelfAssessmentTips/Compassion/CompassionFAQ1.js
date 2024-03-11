@@ -6,41 +6,54 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const CompassionFAQ1 = () => {
   const navigation = useNavigation();
 
-  const onNextPress = () => {
+  /*   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
-  };
+    navigation.navigate("CompassionFAQ2");
+  }; */
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Compassion FAQ</Text>
       </View>
-
       <View style={styles.content}>
-        <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+        <Text style={styles.questionText}>
+          Why is compassion part of therapy?
         </Text>
+        <Text style={styles.answerText}>
+          • As humans, we have an innate propensity for compassion. Compassion
+          consistently shows up in cultural and religious teachings around the
+          world. When people perform behaviour associated with compassion, such
+          as warm smiles and friendly hand gestures, their bodies produce more
+          oxytocin.
+        </Text>
+        <Text style={styles.questionText}>
+          How Do We Foster Our Compassion?
+        </Text>
+        <Text style={styles.answerText}>• Self-Compassion</Text>
+        <Text style={styles.answerText}>• Compassion For Others </Text>
+        <Text style={styles.answerText}>• Empathy</Text>
+        <Text style={styles.answerText}>• Selflessness</Text>
+        <Text style={styles.answerText}>• Forgiveness</Text>
+        <Text style={styles.answerText}>• Kindness</Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
+      {/*       <TouchableOpacity style={styles.button} onPress={onNextPress}>
         <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+        <TouchableOpacity onPress={() => navigation.navigate("CompassionFAQ1")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-          <AntDesign name="home" size={28} color="black" />
+          <MaterialIcons name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity onPress={() => navigation.navigate("CompassionFAQ2")}>
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -51,7 +64,7 @@ const AnxietyAwareness = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#00BFFF", // Adjusted to match the screenshot
+    backgroundColor: "#00BFFF",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -60,13 +73,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
+    color: "#fff",
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
   },
   content: {
-    backgroundColor: "#FFFFFF", // White background for the content
+    backgroundColor: "#fff",
     borderRadius: 20,
     padding: 20,
     marginBottom: 20,
@@ -80,19 +93,19 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   questionText: {
-    color: "black", // Text color adjusted to match the screenshot
+    color: "#333",
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
   },
   answerText: {
-    color: "#333333", // Dark grey color for the text
+    color: "#333",
     fontSize: 16,
     fontWeight: "400",
     lineHeight: 24,
   },
   button: {
-    backgroundColor: "#1E90FF", // Dodger blue background for the button
+    backgroundColor: "#4A90E2",
     paddingHorizontal: 30,
     paddingVertical: 10,
     borderRadius: 25,
@@ -108,7 +121,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    color: "#FFFFFF", // White text for the button
+    color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
   },
@@ -117,9 +130,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     paddingHorizontal: 20,
-    position: "absolute",
-    bottom: 10,
+    position: "absolute", // 아이콘 컨테이너를 절대 위치로 설정합니다.
+    bottom: 30, // 아이콘 컨테이너를 화면 아래에 위치시킵니다.
   },
 });
 
-export default AnxietyAwareness;
+export default CompassionFAQ1;

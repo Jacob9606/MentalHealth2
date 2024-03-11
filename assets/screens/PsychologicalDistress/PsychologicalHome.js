@@ -18,19 +18,13 @@ export default function PsychologicalHome({ navigation }) {
           style={styles.longButton}
           onPress={() => navigation.navigate("PsychologicalAwaraness")}
         >
-          <Text style={styles.buttonText}>Awareness</Text>
+          <Text style={styles.buttonText}>Awaraness</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.longButton}
           onPress={() => navigation.navigate("PsychologicalSymptoms")}
         >
           <Text style={styles.buttonText}>Symptoms</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.longButton}
-          onPress={() => navigation.navigate("PsychologicalFAQS1")}
-        >
-          <Text style={styles.buttonText}>FAQS</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.iconContainer}>
@@ -100,6 +94,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingBottom: 20,
     width: "100%",
-    bottom: -30,
+    bottom: -150,
   },
 });

@@ -9,30 +9,33 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const SuicideBehaviour = () => {
   const navigation = useNavigation();
-
-  const onNextPress = () => {
-    // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
-  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Suicide Behaviour</Text>
       </View>
 
       <View style={styles.content}>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          • All individuals with mental disorders and substance use problems are
+          at risk of suicide or self-harm compared to the general population.
         </Text>
+        <Text style={styles.questionText}>
+          {"\n"}Typical Presenting Complaints of Suicide
+        </Text>
+        <Text style={styles.answerText}>
+          • Feeling extremely upset or distressed. More than 50% of patients
+          with Depressive disorder have suicidal behavior.
+        </Text>
+        <Text style={styles.answerText}>
+          • Profound hopelessness or sadness
+        </Text>
+        <Text style={styles.answerText}>• Past self-harm attempts</Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+
       <View style={styles.iconContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
@@ -122,4 +125,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AnxietyAwareness;
+export default SuicideBehaviour;

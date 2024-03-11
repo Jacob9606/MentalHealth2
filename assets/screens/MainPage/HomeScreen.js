@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function DepressionHome() {
+export default function HomeScreen() {
   const navigation = useNavigation();
 
   const navigateToScreen = (screenName) => {
@@ -17,13 +17,16 @@ export default function DepressionHome() {
   };
 
   const menuItems = [
-    { name: "Awareness", screen: "DepressionAwarness" },
-    { name: "Cause of Depression", screen: "CauseOfDepression" },
-    { name: "Depressive Disorder", screen: "DepressiveDisorder" },
-    { name: "Suicide Behaviour", screen: "SuicideBehaviour" },
-    { name: "Treatmnet", screen: "DepressionTreatmentConcept" },
-    { name: "Role of Anti-Depressant", screen: "RoleOfAntiDepressants" },
-    { name: "SummaryFAQ", screen: "SummaryFAQ1" },
+    { name: "Mental Health Concept", screen: "MentalHealthConceptsHome" },
+    { name: "Depression", screen: "DepressionHome" },
+    { name: "Anxiety", screen: "AnxietyHome" },
+    { name: "Psychological Distress", screen: "PsychologicalHome" },
+    { name: "Self-Assessment & Tips", screen: "SelfAssessmentTipsHome" },
+    { name: "Profile", screen: "LoginScreen" },
+    {
+      name: "Psychological First Aid & Substance Use Disorder",
+      screen: "PsychologicalHome",
+    },
   ];
 
   return (
@@ -56,16 +59,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#00BFFF",
   },
   header: {
-    marginTop: 50,
-    height: "30%",
+    marginTop: 20,
+    height: 200,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#00BFFF",
   },
   logoText: {
-    marginTop: 15,
+    marginTop: 10,
     fontWeight: "bold",
-    fontSize: 24,
+    fontSize: 20,
     color: "#fff",
   },
   menu: {
@@ -78,17 +81,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#87CEFA",
     width: "80%",
-    height: 60,
+    height: 50, // 조정된 높이
     marginBottom: 10,
     borderRadius: 10,
   },
   buttonText: {
     color: "#fff",
-    fontSize: 18,
+    fontSize: 14, // 조정된 폰트 크기
+    textAlign: "center",
   },
   logo: {
-    width: 200,
-    height: 200,
-    marginTop: 25,
+    width: 150, // 조정된 이미지 크기
+    height: 150, // 조정된 이미지 크기
+    marginTop: 10,
   },
 });

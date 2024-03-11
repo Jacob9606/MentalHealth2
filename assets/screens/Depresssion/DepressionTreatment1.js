@@ -9,38 +9,47 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const DepressionTreatment1 = () => {
   const navigation = useNavigation();
-
-  const onNextPress = () => {
-    // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
-  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Treatment</Text>
       </View>
 
       <View style={styles.content}>
+        <Text style={styles.questionText}>A. Psychotherapy</Text>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          • This helps to treat mild to Moderate Depression. Those therapies
+          include:
+        </Text>
+        <Text style={styles.answerText}>• Cognitive behavioral therapy</Text>
+        <Text style={styles.answerText}>• Interpersonal Therapy</Text>
+        <Text style={styles.answerText}>• Couple Therapy</Text>
+
+        <Text style={styles.questionText}>{"\n"}B. Medication</Text>
+        <Text style={styles.answerText}>
+          • If the depression is severe and lasts longer your doctor may
+          prescribe medication. Anti-depression is effective in treating
+          depression.
+        </Text>
+        <Text style={styles.answerText}>
+          • It may take up to three to four weeks for antidepressants to have a
+          significant effect.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+        <TouchableOpacity onPress={() => navigation.navigate("DepressionHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <AntDesign name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("DepressionSelfCare")}
+        >
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -122,4 +131,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AnxietyAwareness;
+export default DepressionTreatment1;

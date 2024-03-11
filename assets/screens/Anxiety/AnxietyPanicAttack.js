@@ -9,25 +9,30 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const AnxietyPanicAttack = () => {
   const navigation = useNavigation();
-
   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
+    navigation.navigate("AnxietyPanicDisorder");
   };
-
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Panic Attack & Panic Disorder</Text>
       </View>
 
       <View style={styles.content}>
+        <Text style={styles.questionText}>Panic attack and panic disorder</Text>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          • Panic attack: Sudden, intense episodes of apprehension, terror, and
+          feelings of impending doom. Symptoms reach peak intensity within 10
+          minutes.
+        </Text>
+        <Text style={styles.questionText}>Panic attack and panic disorder</Text>
+        <Text style={styles.answerText}>
+          • Panic disorder symptoms interfere with important areas of
+          functioning and symptoms persist for at least 1 month for panic
+          disorder.
         </Text>
       </View>
       <TouchableOpacity style={styles.button} onPress={onNextPress}>
@@ -122,4 +127,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AnxietyAwareness;
+export default AnxietyPanicAttack;

@@ -9,30 +9,47 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const DepressiveDisorder = () => {
   const navigation = useNavigation();
-
-  const onNextPress = () => {
-    // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
-  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Depressive Disorder</Text>
       </View>
 
       <View style={styles.content}>
         <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+          • All the symptoms are not universal to all. However, most people with
+          depressive disorder have at least 5 of the following Signs and
+          symptoms that happen to individual most of the day:
+        </Text>
+        <Text style={styles.answerText}>1. Depressed mood feeling.</Text>
+        <Text style={styles.answerText}>2. Anhedonia.</Text>
+        <Text style={styles.answerText}>
+          3. Insomnia or Hypersomnia: sleep loss Or Sleep Increase
+        </Text>
+        <Text style={styles.answerText}>4. Fatigue</Text>
+        <Text style={styles.answerText}>
+          5. Decreased concentration and Unable to make decisions.
+        </Text>
+        <Text style={styles.answerText}>6. Decrease or increase appetite.</Text>
+        <Text style={styles.answerText}>7. Excessive guilt.</Text>
+        <Text style={styles.answerText}>
+          8. Psychomotor agitation and retardation
+        </Text>
+        <Text style={styles.answerText}>
+          9. Recurrent thoughts of death, suicidal ideation, or suicide attempt.
+        </Text>
+
+        <Text style={styles.answerText}>
+          {"\n"}1 out of 5 symptoms should be a depressive mood or loss of
+          interest. Furthermore, physical, or psychological problems such as
+          head headaches, other sorts of pain or cramping (stabbing) may be
+          present.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+
       <View style={styles.iconContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />
@@ -117,9 +134,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     paddingHorizontal: 20,
-    position: "absolute",
-    bottom: 10,
+
+    bottom: 0,
   },
 });
 
-export default AnxietyAwareness;
+export default DepressiveDisorder;

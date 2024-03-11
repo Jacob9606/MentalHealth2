@@ -3,10 +3,15 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import HomeScreen from "./assets/screens/HomeScreen";
+import HomeScreen from "./assets/screens/MainPage/HomeScreen";
 import LoginScreen from "./assets/screens/LoginScreen";
 import CreateAnAccount from "./assets/screens/CreateAnAccount";
 import MentalHealthConcept from "./assets/screens/MentalHealthConcept";
+import MentalHealthConceptsHome from "./assets/screens/MentalHealthConcept/MentalHealthConceptsHome";
+import MentalIllness from "./assets/screens/MentalHealthConcept/MentalIllness";
+import WarningSignsSymptoms from "./assets/screens/MentalHealthConcept/WarningSignsSymptoms";
+import SummaryFAQ1 from "./assets/screens/MentalHealthConcept/SummaryFAQ1";
+import SummaryFAQ2 from "./assets/screens/MentalHealthConcept/SummaryFAQ2";
 
 // Profile Screens
 import ProfileMain from "./assets/screens/Profile/ProfileMain";
@@ -18,39 +23,24 @@ import AppointmentReminderSetup from "./assets/screens/Profile/AppointmentRemind
 import ProgressReport from "./assets/screens/Profile/ProgressReport";
 
 import FAQS from "./assets/screens/FAQS/FAQS";
-import MindfulnessTechniques1 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques1";
-import MindfulnessTechniques2 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques2";
-import MindfulnessTechniques34 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques34";
-import MindfulnessTechniques56 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques56";
-import MindfulnessTechniques789 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques789";
-import MindfulnessTechniques10 from "./assets/screens/FAQS/MindfulnessTechniques/MindfulnessTechniques10";
+import MindfulnessTechniques from "./assets/screens/SelfAssessmentTips/MindfulnessTechniques/MindfulnessTechniques";
+import MindfulnessFAQ from "./assets/screens/SelfAssessmentTips/MindfulnessTechniques/MindfulnessFAQ";
 
-import MeditationTechniqueConcept from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueConcept";
-import MeditationTechniqueBasics from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueBasics";
-import MeditationTechniqueStep1 from "./assets/screens/FAQS/MeditationTechnique/MeditaitonTechniqueStep1";
-import MeditationTechniqueStep2 from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueStep2";
-import MeditationTechniqueStep3 from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueStep3";
-import MeditationTechniqueStep4 from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueStep4";
-import MeditationTechniqueStep5 from "./assets/screens/FAQS/MeditationTechnique/MeditationTechniqueStep5";
-import MeditationBenefits1 from "./assets/screens/FAQS/MeditationTechnique/MeditationBenefits1";
-import MeditationBenefits2 from "./assets/screens/FAQS/MeditationTechnique/MeditationBenefits2";
-import MeditationBenefits3 from "./assets/screens/FAQS/MeditationTechnique/MeditationBenefits3";
-
+import MeditationTechniqueConcept from "./assets/screens/SelfAssessmentTips/MeditationTechnique/MeditationTechniqueConcept";
+import MeditationTechniqueStep1 from "./assets/screens/SelfAssessmentTips/MeditationTechnique/MeditaitonTechniqueStep1";
 import MeditationMusic from "./assets/screens/FAQS/MeditationForSleep/MeditationMusic";
+import MeditationFAQ1 from "./assets/screens/SelfAssessmentTips/MeditationTechnique/MeditationFAQ1";
+import MeditationFAQ2 from "./assets/screens/SelfAssessmentTips/MeditationTechnique/MeditationFAQ2";
 
-import CompassionFAQ1 from "./assets/screens/FAQS/Compassion/CompassionFAQ1";
-import CompassionFAQ2 from "./assets/screens/FAQS/Compassion/CompassionFAQ2";
+import CompassionFAQ1 from "./assets/screens/SelfAssessmentTips/Compassion/CompassionFAQ1";
 
-import BreathingFAQ1 from "./assets/screens/FAQS/BreathingExerciseTechnique/BreathingFAQ1";
-import BreathingFAQ2 from "./assets/screens/FAQS/BreathingExerciseTechnique/BreathingFAQ2";
+import ProgressiveConcept from "./assets/screens/SelfAssessmentTips/ProgressiveMuschleRelaxationTechniques/ProgressiveConcept";
+import ProgressiveFAQ from "./assets/screens/SelfAssessmentTips/ProgressiveMuschleRelaxationTechniques/ProgressiveFAQ";
+import ProgressiveTech1 from "./assets/screens/SelfAssessmentTips/ProgressiveMuschleRelaxationTechniques/ProgressiveTech1";
 
-import ProgressiveConcept from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveConcept";
-import ProgressiveFAQ from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveFAQ";
-import ProgressiveTech1 from "./assets/screens/FAQS/ProgressiveMuschleRelaxationTechniques/ProgressiveTech1";
-
-import GratitudeFAQ1 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ1";
-import GratitudeFAQ2 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ2";
-import GratitudeFAQ3 from "./assets/screens/FAQS/Gratitude/GratitudeFAQ3";
+import GratitudeFAQ1 from "./assets/screens/SelfAssessmentTips/Gratitude/GratitudeFAQ1";
+import GratitudeFAQ2 from "./assets/screens/SelfAssessmentTips/Gratitude/GratitudeFAQ2";
+import GratitudeFAQ3 from "./assets/screens/SelfAssessmentTips/Gratitude/GratitudeFAQ3";
 
 import AnxietyHome from "./assets/screens/Anxiety/AnxietyHome";
 import AnxietyAwareness from "./assets/screens/Anxiety/AnxietyAwareness";
@@ -59,20 +49,27 @@ import AnxietyTreatment from "./assets/screens/Anxiety/AnxietyTreatment";
 import AnxietyFAQS1 from "./assets/screens/Anxiety/AnxietyFAQS1";
 import AnxietyFAQS2 from "./assets/screens/Anxiety/AnxietyFAQS2";
 import AnxietyFAQS3 from "./assets/screens/Anxiety/AnxietyFAQS3";
+import AnxietyGAD from "./assets/screens/Anxiety/AnxietyGAD";
+import AnxietyPanicAttack from "./assets/screens/Anxiety/AnxietyPanicAttack";
+import AnxietyPanicDisorder from "./assets/screens/Anxiety/AnxietyPanicDisorder";
 
 import DepressionHome from "./assets/screens/Depresssion/DepressionHome";
 import DepressionAwarness from "./assets/screens/Depresssion/DepressionAwarness";
-import DepressionSymptoms from "./assets/screens/Depresssion/DepressionSymptoms";
-import DepressionTreatment from "./assets/screens/Depresssion/DepressionTreatment";
+import CauseOfDepression from "./assets/screens/Depresssion/CauseOfDepression";
 import DepressionSelfCare from "./assets/screens/Depresssion/DepressionSelfCare";
 import DepressionFAQS1 from "./assets/screens/Depresssion/DepressionFAQS1";
 import DepressionFAQS2 from "./assets/screens/Depresssion/DepressionFAQS2";
+import DepressiveDisorder from "./assets/screens/Depresssion/DepressiveDisorder";
+import SuicideBehaviour from "./assets/screens/Depresssion/SuicideBehaviour";
+import DepressionTreatmentConcept from "./assets/screens/Depresssion/DepressionTreatmentConcept";
+import RoleOfAntiDepressants from "./assets/screens/Depresssion/RoleOfAntiDepressants";
 
 import PsychologicalHome from "./assets/screens/PsychologicalDistress/PsychologicalHome";
 import PsychologicalAwaraness from "./assets/screens/PsychologicalDistress/PsychologicalAwaraness";
 import PsychologicalSymptoms from "./assets/screens/PsychologicalDistress/PsychologicalSymptoms";
 import PsychologicalFAQS1 from "./assets/screens/PsychologicalDistress/PsychologicalFAQS1";
 import PsychologicalFAQS2 from "./assets/screens/PsychologicalDistress/PsychologicalFAQS2";
+import PsychologicalTreatment from "./assets/screens/PsychologicalDistress/PsychologicalTreatment";
 
 import ManagementHome from "./assets/screens/Management/ManagementHome";
 import ManagementFirstAid from "./assets/screens/Management/ManagementFirstAid";
@@ -87,31 +84,37 @@ import WellbingTips5 from "./assets/screens/Wellbeing/WellbingTips5";
 import WellbingTips6 from "./assets/screens/Wellbeing/WellbingTips6";
 import WellbingTips7 from "./assets/screens/Wellbeing/WellbingTips7";
 
+import SelfAssessmentTipsHome from "./assets/screens/SelfAssessmentTips/SelfAssessmentTipsHome";
+import MindfulnessConcept from "./assets/screens/SelfAssessmentTips/MindfulnessTechniques/MindfulnessConcept";
+
+import BreathingFAQ1 from "./assets/screens/SelfAssessmentTips/BreathingExerciseTechnique/BreathingFAQ1";
+import BreathingFAQ2 from "./assets/screens/SelfAssessmentTips/BreathingExerciseTechnique/BreathingFAQ2";
+
 // Dass-21 Screens
-import Q1 from "./assets/screens/Dass21/Q1";
-import Q2 from "./assets/screens/Dass21/Q2";
-import Q3 from "./assets/screens/Dass21/Q3";
-import Q4 from "./assets/screens/Dass21/Q4";
-import Q5 from "./assets/screens/Dass21/Q5";
-import Q6 from "./assets/screens/Dass21/Q6";
-import Q7 from "./assets/screens/Dass21/Q7";
-import Q8 from "./assets/screens/Dass21/Q8";
-import Q9 from "./assets/screens/Dass21/Q9";
-import Q10 from "./assets/screens/Dass21/Q10";
-import Q11 from "./assets/screens/Dass21/Q11";
-import Q12 from "./assets/screens/Dass21/Q12";
-import Q13 from "./assets/screens/Dass21/Q13";
-import Q14 from "./assets/screens/Dass21/Q14";
-import Q15 from "./assets/screens/Dass21/Q15";
-import Q16 from "./assets/screens/Dass21/Q16";
-import Q17 from "./assets/screens/Dass21/Q17";
-import Q18 from "./assets/screens/Dass21/Q18";
-import Q19 from "./assets/screens/Dass21/Q19";
-import Q20 from "./assets/screens/Dass21/Q20";
-import Q21 from "./assets/screens/Dass21/Q21";
-import ResultModerate from "./assets/screens/Dass21/ResultModerate";
-import ResultSevere from "./assets/screens/Dass21/ResultSevere";
-import ResultNormal from "./assets/screens/Dass21/ResultNormal";
+import Q1 from "./assets/screens/SelfAssessmentTips/Dass21/Q1";
+import Q2 from "./assets/screens/SelfAssessmentTips/Dass21/Q2";
+import Q3 from "./assets/screens/SelfAssessmentTips/Dass21/Q3";
+import Q4 from "./assets/screens/SelfAssessmentTips/Dass21/Q4";
+import Q5 from "./assets/screens/SelfAssessmentTips/Dass21/Q5";
+import Q6 from "./assets/screens/SelfAssessmentTips/Dass21/Q6";
+import Q7 from "./assets/screens/SelfAssessmentTips/Dass21/Q7";
+import Q8 from "./assets/screens/SelfAssessmentTips/Dass21/Q8";
+import Q9 from "./assets/screens/SelfAssessmentTips/Dass21/Q9";
+import Q10 from "./assets/screens/SelfAssessmentTips/Dass21/Q10";
+import Q11 from "./assets/screens/SelfAssessmentTips/Dass21/Q11";
+import Q12 from "./assets/screens/SelfAssessmentTips/Dass21/Q12";
+import Q13 from "./assets/screens/SelfAssessmentTips/Dass21/Q13";
+import Q14 from "./assets/screens/SelfAssessmentTips/Dass21/Q14";
+import Q15 from "./assets/screens/SelfAssessmentTips/Dass21/Q15";
+import Q16 from "./assets/screens/SelfAssessmentTips/Dass21/Q16";
+import Q17 from "./assets/screens/SelfAssessmentTips/Dass21/Q17";
+import Q18 from "./assets/screens/SelfAssessmentTips/Dass21/Q18";
+import Q19 from "./assets/screens/SelfAssessmentTips/Dass21/Q19";
+import Q20 from "./assets/screens/SelfAssessmentTips/Dass21/Q20";
+import Q21 from "./assets/screens/SelfAssessmentTips/Dass21/Q21";
+import ResultModerate from "./assets/screens/SelfAssessmentTips/Dass21/ResultModerate";
+import ResultSevere from "./assets/screens/SelfAssessmentTips/Dass21/ResultSevere";
+import ResultNormal from "./assets/screens/SelfAssessmentTips/Dass21/ResultNormal";
 
 const Stack = createStackNavigator();
 
@@ -216,34 +219,19 @@ function App() {
           options={{ title: "FAQS" }}
         />
         <Stack.Screen
-          name="MindfulnessTechniques1"
-          component={MindfulnessTechniques1}
-          options={{ title: "MindfulnessTechniques1" }}
+          name="MindfulnessConcept"
+          component={MindfulnessConcept}
+          options={{ title: "MindfulnessConcept" }}
         />
         <Stack.Screen
-          name="MindfulnessTechniques2"
-          component={MindfulnessTechniques2}
-          options={{ title: "MindfulnessTechniques2" }}
+          name="MindfulnessTechniques"
+          component={MindfulnessTechniques}
+          options={{ title: "MindfulnessTechniques" }}
         />
         <Stack.Screen
-          name="MindfulnessTechniques34"
-          component={MindfulnessTechniques34}
-          options={{ title: "MindfulnessTechniques34" }}
-        />
-        <Stack.Screen
-          name="MindfulnessTechniques56"
-          component={MindfulnessTechniques56}
-          options={{ title: "MindfulnessTechniques56" }}
-        />
-        <Stack.Screen
-          name="MindfulnessTechniques789"
-          component={MindfulnessTechniques789}
-          options={{ title: "MindfulnessTechniques789" }}
-        />
-        <Stack.Screen
-          name="MindfulnessTechniques10"
-          component={MindfulnessTechniques10}
-          options={{ title: "MindfulnessTechniques10" }}
+          name="MindfulnessFAQ"
+          component={MindfulnessFAQ}
+          options={{ title: "MindfulnessFAQ" }}
         />
         <Stack.Screen
           name="MeditationTechniqueConcept"
@@ -251,49 +239,9 @@ function App() {
           options={{ title: "MeditationTechniqueConcept" }}
         />
         <Stack.Screen
-          name="MeditationTechniqueBasics"
-          component={MeditationTechniqueBasics}
-          options={{ title: "MeditationTechniqueBasics" }}
-        />
-        <Stack.Screen
           name="MeditationTechniqueStep1"
           component={MeditationTechniqueStep1}
           options={{ title: "MeditationTechniqueStep1" }}
-        />
-        <Stack.Screen
-          name="MeditationTechniqueStep2"
-          component={MeditationTechniqueStep2}
-          options={{ title: "MeditationTechniqueStep2" }}
-        />
-        <Stack.Screen
-          name="MeditationTechniqueStep3"
-          component={MeditationTechniqueStep3}
-          options={{ title: "MeditationTechniqueStep3" }}
-        />
-        <Stack.Screen
-          name="MeditationTechniqueStep4"
-          component={MeditationTechniqueStep4}
-          options={{ title: "MeditationTechniqueStep4" }}
-        />
-        <Stack.Screen
-          name="MeditationTechniqueStep5"
-          component={MeditationTechniqueStep5}
-          options={{ title: "MeditationTechniqueStep5" }}
-        />
-        <Stack.Screen
-          name="MeditationBenefits1"
-          component={MeditationBenefits1}
-          options={{ title: "MeditationBenefits1" }}
-        />
-        <Stack.Screen
-          name="MeditationBenefits2"
-          component={MeditationBenefits2}
-          options={{ title: "MeditationBenefits2" }}
-        />
-        <Stack.Screen
-          name="MeditationBenefits3"
-          component={MeditationBenefits3}
-          options={{ title: "MeditationBenefits3" }}
         />
         <Stack.Screen
           name="MeditationMusic"
@@ -304,11 +252,6 @@ function App() {
           name="CompassionFAQ1"
           component={CompassionFAQ1}
           options={{ title: "CompassionFAQ1" }}
-        />
-        <Stack.Screen
-          name="CompassionFAQ2"
-          component={CompassionFAQ2}
-          options={{ title: "CompassionFAQ2" }}
         />
         <Stack.Screen
           name="BreathingFAQ1"
@@ -396,14 +339,9 @@ function App() {
           options={{ title: "DepressionAwarness" }}
         />
         <Stack.Screen
-          name="DepressionSymptoms"
-          component={DepressionSymptoms}
-          options={{ title: "DepressionSymptoms" }}
-        />
-        <Stack.Screen
-          name="DepressionTreatment"
-          component={DepressionTreatment}
-          options={{ title: "DepressionTreatment" }}
+          name="CauseOfDepression"
+          component={CauseOfDepression}
+          options={{ title: "CauseOfDepression" }}
         />
         <Stack.Screen
           name="DepressionSelfCare"
@@ -499,6 +437,86 @@ function App() {
           name="WellbingTips7"
           component={WellbingTips7}
           options={{ title: "WellbingTips7" }}
+        />
+        <Stack.Screen
+          name="SelfAssessmentTipsHome"
+          component={SelfAssessmentTipsHome}
+          options={{ title: "SelfAssessmentTipsHome" }}
+        />
+        <Stack.Screen
+          name="MentalHealthConceptsHome"
+          component={MentalHealthConceptsHome}
+          options={{ title: "MentalHealthConceptsHome" }}
+        />
+        <Stack.Screen
+          name="WarningSignsSymptoms"
+          component={WarningSignsSymptoms}
+          options={{ title: "WarningSignsSymptoms" }}
+        />
+        <Stack.Screen
+          name="SummaryFAQ1"
+          component={SummaryFAQ1}
+          options={{ title: "SummaryFAQ1" }}
+        />
+        <Stack.Screen
+          name="SummaryFAQ2"
+          component={SummaryFAQ2}
+          options={{ title: "SummaryFAQ2" }}
+        />
+        <Stack.Screen
+          name="MentalIllness"
+          component={MentalIllness}
+          options={{ title: "MentalIllness" }}
+        />
+        <Stack.Screen
+          name="DepressiveDisorder"
+          component={DepressiveDisorder}
+          options={{ title: "DepressiveDisorder" }}
+        />
+        <Stack.Screen
+          name="SuicideBehaviour"
+          component={SuicideBehaviour}
+          options={{ title: "SuicideBehaviour" }}
+        />
+        <Stack.Screen
+          name="DepressionTreatmentConcept"
+          component={DepressionTreatmentConcept}
+          options={{ title: "DepressionTreatmentConcept" }}
+        />
+        <Stack.Screen
+          name="RoleOfAntiDepressants"
+          component={RoleOfAntiDepressants}
+          options={{ title: "RoleOfAntiDepressants" }}
+        />
+        <Stack.Screen
+          name="AnxietyGAD"
+          component={AnxietyGAD}
+          options={{ title: "AnxietyGAD" }}
+        />
+        <Stack.Screen
+          name="AnxietyPanicAttack"
+          component={AnxietyPanicAttack}
+          options={{ title: "AnxietyPanicAttack" }}
+        />
+        <Stack.Screen
+          name="AnxietyPanicDisorder"
+          component={AnxietyPanicDisorder}
+          options={{ title: "AnxietyPanicDisorder" }}
+        />
+        <Stack.Screen
+          name="PsychologicalTreatment"
+          component={PsychologicalTreatment}
+          options={{ title: "PsychologicalTreatment" }}
+        />
+        <Stack.Screen
+          name="MeditationFAQ1"
+          component={MeditationFAQ1}
+          options={{ title: "MeditationFAQ1" }}
+        />
+        <Stack.Screen
+          name="MeditationFAQ2"
+          component={MeditationFAQ2}
+          options={{ title: "MeditationFAQ2" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

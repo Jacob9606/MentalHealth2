@@ -6,41 +6,49 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons"; // Expo를 사용한다고 가정합니다.
 import { useNavigation } from "@react-navigation/native";
 
-const AnxietyAwareness = () => {
+const MeditationFAQ1 = () => {
   const navigation = useNavigation();
 
-  const onNextPress = () => {
-    // Navigation logic to go to the next FAQ
-    navigation.navigate("AnxietyGAD");
+  const onStepTwoPress = () => {
+    // Insert logic for navigation or state transition to Step 2
+    navigation.navigate("MeditationFAQ2");
   };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Awareness</Text>
+        <Text style={styles.headerText}>Meditation Technique</Text>
       </View>
-
       <View style={styles.content}>
-        <Text style={styles.answerText}>
-          • People with anxiety disorders often experience intense and excessive
-          fear and worry that causes problems in their family, social, school
-          and work life. But anxiety disorders can be treated!
+        <Text style={styles.stepTitle}>
+          FAQ: What Are The Benefits Of Meditation?
+        </Text>
+        <Text style={styles.stepDescription}>
+          1. Physiological benefits such as enhances the immune system, curing
+          headaches & and migraines, increasing serotonin levels, influencing
+          mood and behaviour and drop in cholesterol levels, lowering the risk
+          of cardiovascular disease, and greater brain functioning & relaxed
+          nervous system.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
+      <TouchableOpacity style={styles.button} onPress={onStepTwoPress}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationTechniqueBasics")}
+        >
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-          <AntDesign name="home" size={28} color="black" />
+          <MaterialIcons name="home" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("MeditationTechniqueStep2")}
+        >
           <AntDesign name="arrowright" size={24} color="black" />
         </TouchableOpacity>
       </View>
@@ -51,7 +59,7 @@ const AnxietyAwareness = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#00BFFF", // Adjusted to match the screenshot
+    backgroundColor: "#00BFFF",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -60,13 +68,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: "#FFFFFF", // Adjusted to match the screenshot (navy blue)
+    color: "#fff",
     fontSize: 24,
     fontWeight: "bold",
-    textAlign: "center",
   },
   content: {
-    backgroundColor: "#FFFFFF", // White background for the content
+    backgroundColor: "#fff",
     borderRadius: 20,
     padding: 20,
     marginBottom: 20,
@@ -79,20 +86,20 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  questionText: {
-    color: "black", // Text color adjusted to match the screenshot
+  stepTitle: {
+    color: "#333",
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
   },
-  answerText: {
-    color: "#333333", // Dark grey color for the text
+  stepDescription: {
+    color: "#333",
     fontSize: 16,
     fontWeight: "400",
     lineHeight: 24,
   },
   button: {
-    backgroundColor: "#1E90FF", // Dodger blue background for the button
+    backgroundColor: "#4A90E2",
     paddingHorizontal: 30,
     paddingVertical: 10,
     borderRadius: 25,
@@ -108,7 +115,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    color: "#FFFFFF", // White text for the button
+    color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
   },
@@ -117,9 +124,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     paddingHorizontal: 20,
-    position: "absolute",
-    bottom: 10,
+    position: "absolute", // 아이콘 컨테이너를 절대 위치로 설정합니다.
+    bottom: 30, // 아이콘 컨테이너를 화면 아래에 위치시킵니다.
   },
 });
 
-export default AnxietyAwareness;
+export default MeditationFAQ1;

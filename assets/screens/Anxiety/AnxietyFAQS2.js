@@ -12,10 +12,10 @@ import { useNavigation } from "@react-navigation/native";
 const AnxietyFAQS2 = () => {
   const navigation = useNavigation();
 
-  const onNextPress = () => {
+  /*   const onNextPress = () => {
     // Navigation logic to go to the next FAQ
     navigation.navigate("AnxietyFAQS3");
-  };
+  }; */
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -25,22 +25,20 @@ const AnxietyFAQS2 = () => {
 
       <View style={styles.content}>
         <Text style={styles.questionText}>
-          2. What are the cultural explanations/ of mental illness in Ethiopia?
+          FAQ: How long does it take to treat anxiety disorder?
         </Text>
         <Text style={styles.answerText}>
-          • Spirit possession (likift, zar, wuqabi), Punishment for sins, Evil
-          eye
-        </Text>
-        <Text style={styles.answerText}>
-          • Bewitched/cursed, Thinking too much
-        </Text>
-        <Text style={styles.answerText}>
-          • Exposure to cold air berd, Exposure to sun rays (mitch)
+          • The decision to prescribe an anxiolytic to patients with anxiety
+          disorder should rarely be made on the first visit. The three major
+          drugs to be considered for the treatment of anxiety disorder are
+          benzodiazepines, the SSRI, buspirone, and venlafaxine. Although drug
+          treatment of anxiety disorder is sometimes seen as a 6- to 12-month
+          treatment, some evidence indicates that treatment should be long term.
+          Different medications manage both the physical and psychological
+          symptoms of anxiety.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onNextPress}>
-        <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+
       <View style={styles.iconContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("AnxietyHome")}>
           <AntDesign name="arrowleft" size={24} color="black" />

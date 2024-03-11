@@ -18,19 +18,21 @@ export default function AnxietyHome({ navigation }) {
           style={styles.longButton}
           onPress={() => navigation.navigate("AnxietyAwareness")}
         >
-          <Text style={styles.buttonText}>Awareness</Text>
+          <Text style={styles.buttonText}>
+            Awareness & Generalized Anxiety Disorder
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.longButton}
-          onPress={() => navigation.navigate("AnxietySymptoms")}
+          onPress={() => navigation.navigate("AnxietyPanicAttack")}
         >
-          <Text style={styles.buttonText}>Symptoms</Text>
+          <Text style={styles.buttonText}>Panic Accack and Panic Disorder</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.longButton}
           onPress={() => navigation.navigate("AnxietyTreatment")}
         >
-          <Text style={styles.buttonText}>Treatment</Text>
+          <Text style={styles.buttonText}>Anxiety Treatmentr</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.longButton}
@@ -92,6 +94,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     justifyContent: "center",
+    textAlign: "center",
   },
   logo: {
     width: 200,
